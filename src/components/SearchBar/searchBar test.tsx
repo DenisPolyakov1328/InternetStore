@@ -1,16 +1,9 @@
 'use client'
-
 import React, { useState, MouseEvent } from 'react'
-import {
-  Box,
-  TextField,
-  MenuItem,
-  InputAdornment,
-  Menu,
-  Button
-} from '@mui/material'
+import { Box, TextField, Button } from '@mui/material'
 import SearchIcon from '@mui/icons-material/Search'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
+import CategoryMenu from './CategoryMenu/CategoryMenu'
 
 const categories = [
   'All Categories',
@@ -20,7 +13,15 @@ const categories = [
   'Home'
 ]
 
-function SearchBar2() {
+interface SearchBarProps {
+  showCategories?: boolean
+  showSearchButton?: boolean
+}
+
+const SearchBarTest: React.FC<SearchBarProps> = ({
+  showCategories = false,
+  showSearchButton = false
+}) => {
   const [category, setCategory] = useState<string>(categories[0])
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
   const [searchText, setSearchText] = useState<string>('')
@@ -42,12 +43,6 @@ function SearchBar2() {
     setSearchText(event.target.value)
   }
 
-  const handleSearchSubmit = () => {
-    console.log('Search Text:', searchText)
-    console.log('Selected Category:', category)
-    // логика поиска
-  }
-
   return (
     <Box
       sx={{
@@ -65,42 +60,39 @@ function SearchBar2() {
         fullWidth
         sx={{
           '.MuiOutlinedInput-root': {
-            position: 'relative',
-            display: 'inline-flex',
-            alignItems: 'center',
-            width: '100%',
-            p: 0,
-            height: '46px',
-            overflow: 'hidden',
-            cursor: 'text',
-            color: '#2B3445',
-            borderRadius: '8px',
-            border: '0px solid',
-            backgroundColor: '#F3F5F9',
-            '.MuiOutlinedInput-input': {
-              p: '8px 0',
-              height: '1.8em'
-            }
+            height: showSearchButton ? '44px' : '46px',
+            paddingLeft: showSearchButton ? '14px' : '0',
+            ':hover .MuiOutlinedInput-notchedOutline': {
+              borderColor: showSearchButton ? 'transparent' : '#2b3445'
+            },
+            '.MuiOutlinedInput-notchedOutline': {
+              borderColor: showSearchButton ? 'transparent' : '#dae1e7'
+            },
+            '&.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline':
+              {
+                borderColor: showSearchButton ? 'transparent' : '#1f2937'
+              }
           }
         }}
         InputProps={{
-          startAdornment: (
-            <InputAdornment
-              position="start"
+          startAdornment: showCategories ? (
+            <Box
               sx={{
+                display: 'grid',
                 mr: '16px',
                 paddingInline: '16px',
                 borderRight: '1px solid rgb(218, 225, 231)'
               }}
             >
-              <SearchIcon sx={{ fontSize: '17px' }} />
-            </InputAdornment>
+              <SearchIcon />
+            </Box>
+          ) : (
+            <SearchIcon sx={{ mr: '6px' }} />
           ),
-          endAdornment: (
+          endAdornment: showCategories ? (
             <Button
               onClick={handleCategoryClick}
               sx={{
-                display: 'flex',
                 justifyContent: 'flex-end',
                 gap: '4px',
                 height: '100%',
@@ -109,9 +101,7 @@ function SearchBar2() {
                 width: '160px',
                 minWidth: '160px',
                 color: '#4B566B',
-                p: '0',
-                m: '0',
-                paddingInline: '24px',
+                padding: '0 24px',
                 whiteSpace: 'pre',
                 borderLeft: '1px solid rgb(218, 225, 231)',
                 borderRadius: 0,
@@ -123,29 +113,36 @@ function SearchBar2() {
               {category}
               <KeyboardArrowDownIcon sx={{ fontSize: '20px' }} />
             </Button>
-          )
+          ) : showSearchButton ? (
+            <Button
+              sx={{
+                height: '100%',
+                textTransform: 'none',
+                fontSize: '14px',
+                color: '#e9edf8',
+                backgroundColor: '#1F2937',
+                borderRadius: 0,
+                padding: '6px 48px',
+                ':hover': {
+                  backgroundColor: '#404f64'
+                }
+              }}
+            >
+              Search
+            </Button>
+          ) : null
         }}
       />
-      <Menu
-        anchorEl={anchorEl}
-        open={Boolean(anchorEl)}
-        onClose={handleCategoryClose}
-        sx={{
-          '.MuiPaper-root': {
-            mt: '8px',
-            minWidth: '180px',
-            boxShadow: 'rgba(43, 52, 69, 0.05) 0px 0px 24px 0px'
-          }
-        }}
-      >
-        {categories.map((cat) => (
-          <MenuItem key={cat} onClick={() => handleCategorySelect(cat)}>
-            {cat}
-          </MenuItem>
-        ))}
-      </Menu>
+      {showCategories && (
+        <CategoryMenu
+          anchorEl={anchorEl}
+          onClose={handleCategoryClose}
+          onSelect={handleCategorySelect}
+          categories={categories}
+        />
+      )}
     </Box>
   )
 }
 
-export default SearchBar2
+export default SearchBarTest

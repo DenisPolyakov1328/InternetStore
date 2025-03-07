@@ -3,13 +3,15 @@ import SearchIcon from '@mui/icons-material/Search'
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined'
 import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined'
 import { Badge } from '@mui/material'
-import SearchBar2 from './searchBar2'
+import SearchBar from '../components/SearchBar/searchBar'
+import SearchBarCopy from '@/components/SearchBar/searchBar copy'
+import SearchBarTest from '@/components/SearchBar/searchBar test'
 
 export default function Home() {
   return (
     <div>
-      {/* <SearchBar /> */}
-      <SearchBar2 />
+      <SearchBarTest showCategories={true} />
+      <SearchBar />
       <CustomIconButton icon={SearchIcon} />
       <CustomIconButton
         icon={AccountCircleOutlinedIcon}
@@ -23,6 +25,9 @@ export default function Home() {
           component="a"
         />
       </Badge>
+      <SearchBarCopy />
+
+      <SearchBarTest showSearchButton={true} />
     </div>
   )
 }
