@@ -44,6 +44,15 @@ const theme = createTheme({
         fontFamily: publicSans.style.fontFamily,
     },
     components: {
+        MuiButton: {
+            styleOverrides: {
+                root: {
+                    fontSize: '14px',
+                    height: '100%',
+                    textTransform: 'none',
+                },
+            },
+        },
         MuiIconButton: {
             styleOverrides: {
                 root: {

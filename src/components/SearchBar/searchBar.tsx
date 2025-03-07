@@ -1,9 +1,16 @@
 'use client'
 import React, { useState, MouseEvent } from 'react'
-import { Box, TextField, Button } from '@mui/material'
+import { Box, TextField } from '@mui/material'
 import SearchIcon from '@mui/icons-material/Search'
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
+import SearchIconWithBox from './SearchIconWithBox/SearchIconWithBox'
 import CategoryMenu from './CategoryMenu/CategoryMenu'
+import CategoryButton from './Buttons/CategoryButton'
+import SearchButton from './Buttons/SearchButton'
+
+interface SearchBarProps {
+  showCategories?: boolean
+  showSearchButton?: boolean
+}
 
 const categories = [
   'All Categories',
@@ -13,7 +20,10 @@ const categories = [
   'Home'
 ]
 
-const SearchBar: React.FC = () => {
+const SearchBarTest: React.FC<SearchBarProps> = ({
+  showCategories = false,
+  showSearchButton = false
+}) => {
   const [category, setCategory] = useState<string>(categories[0])
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
   const [searchText, setSearchText] = useState<string>('')
@@ -52,67 +62,46 @@ const SearchBar: React.FC = () => {
         fullWidth
         sx={{
           '.MuiOutlinedInput-root': {
-            height: '46px',
+            height: showSearchButton ? '44px' : '46px',
+            paddingLeft: showSearchButton ? '14px' : '0',
             ':hover .MuiOutlinedInput-notchedOutline': {
-              borderColor: '#2b3445'
+              borderColor: showSearchButton ? 'transparent' : '#2b3445'
             },
             '.MuiOutlinedInput-notchedOutline': {
-              borderColor: '#dae1e7'
+              borderColor: showSearchButton ? 'transparent' : '#dae1e7'
             },
             '&.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline':
               {
-                borderColor: '#1f2937'
+                borderColor: showSearchButton ? 'transparent' : '#1f2937'
               }
           }
         }}
         InputProps={{
-          startAdornment: (
-            <Box
-              sx={{
-                display: 'grid',
-                mr: '16px',
-                paddingInline: '16px',
-                borderRight: '1px solid rgb(218, 225, 231)'
-              }}
-            >
-              <SearchIcon sx={{ fontSize: '17px', color: '#7d879c' }} />
-            </Box>
+          startAdornment: showCategories ? (
+            <SearchIconWithBox />
+          ) : (
+            <SearchIcon sx={{ mr: '6px' }} />
           ),
-          endAdornment: (
-            <Button
-              onClick={handleCategoryClick}
-              sx={{
-                justifyContent: 'flex-end',
-                gap: '4px',
-                height: '100%',
-                textTransform: 'none',
-                fontSize: '14px',
-                width: '160px',
-                minWidth: '160px',
-                color: '#4B566B',
-                padding: '0 24px',
-                whiteSpace: 'pre',
-                borderLeft: '1px solid rgb(218, 225, 231)',
-                borderRadius: 0,
-                ':hover': {
-                  backgroundColor: '#F3F5F9'
-                }
-              }}
-            >
-              {category}
-              <KeyboardArrowDownIcon sx={{ fontSize: '20px' }} />
-            </Button>
+          endAdornment: showCategories ? (
+            <CategoryButton
+              category={category}
+              onCategoryClick={handleCategoryClick}
+            />
+          ) : (
+            <SearchButton />
           )
         }}
       />
-      <CategoryMenu
-        anchorEl={anchorEl}
-        onClose={handleCategoryClose}
-        onSelect={handleCategorySelect}
-        categories={categories}
-      />
+      {showCategories && (
+        <CategoryMenu
+          anchorEl={anchorEl}
+          onClose={handleCategoryClose}
+          onSelect={handleCategorySelect}
+          categories={categories}
+        />
+      )}
     </Box>
   )
 }
 
-export default SearchBar
+export default SearchBarTest
