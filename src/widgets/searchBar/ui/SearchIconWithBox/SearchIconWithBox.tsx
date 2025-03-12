@@ -2,7 +2,7 @@ import React from 'react'
 import { Box } from '@mui/material'
 import SearchIcon from '@mui/icons-material/Search'
 
-const SearchIconWithBox: React.FC = () => {
+export const SearchIconWithBox = () => {
   return (
     <Box
       sx={{
@@ -16,5 +16,3 @@ const SearchIconWithBox: React.FC = () => {
     </Box>
   )
 }
-
-export default SearchIconWithBox

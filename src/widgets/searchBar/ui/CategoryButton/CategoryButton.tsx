@@ -7,10 +7,10 @@ interface CategoryButtonProps {
   onCategoryClick: (event: MouseEvent<HTMLElement>) => void
 }
 
-const CategoryButton: React.FC<CategoryButtonProps> = ({
+export const CategoryButton = ({
   category,
   onCategoryClick
-}) => {
+}: CategoryButtonProps) => {
   return (
     <Button
       onClick={onCategoryClick}
@@ -34,5 +34,3 @@ const CategoryButton: React.FC<CategoryButtonProps> = ({
     </Button>
   )
 }
-
-export default CategoryButton

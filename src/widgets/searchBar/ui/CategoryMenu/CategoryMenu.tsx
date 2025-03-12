@@ -8,12 +8,12 @@ interface CategoryMenuProps {
   categories: string[]
 }
 
-const CategoryMenu: React.FC<CategoryMenuProps> = ({
+export const CategoryMenu = ({
   anchorEl,
   onClose,
   onSelect,
   categories
-}) => {
+}: CategoryMenuProps) => {
   return (
     <Menu
       anchorEl={anchorEl}
@@ -35,5 +35,3 @@ const CategoryMenu: React.FC<CategoryMenuProps> = ({
     </Menu>
   )
 }
-
-export default CategoryMenu

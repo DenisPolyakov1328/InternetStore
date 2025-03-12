@@ -5,7 +5,7 @@ interface SearchButtonProps {
   onClick?: () => void
 }
 
-const SearchButton: React.FC<SearchButtonProps> = ({ onClick }) => {
+export const SearchButton = ({ onClick }: SearchButtonProps) => {
   return (
     <Button
       sx={{
@@ -23,5 +23,3 @@ const SearchButton: React.FC<SearchButtonProps> = ({ onClick }) => {
     </Button>
   )
 }
-
-export default SearchButton

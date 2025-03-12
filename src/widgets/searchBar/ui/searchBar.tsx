@@ -2,10 +2,11 @@
 import React, { useState, MouseEvent } from 'react'
 import { Box, TextField } from '@mui/material'
 import SearchIcon from '@mui/icons-material/Search'
-import SearchIconWithBox from './SearchIconWithBox/SearchIconWithBox'
-import CategoryMenu from './CategoryMenu/CategoryMenu'
-import CategoryButton from './Buttons/CategoryButton'
-import SearchButton from './Buttons/SearchButton'
+import { SearchIconWithBox } from './SearchIconWithBox/SearchIconWithBox'
+import { CategoryMenu } from './CategoryMenu/CategoryMenu'
+import { CategoryButton } from './CategoryButton/CategoryButton'
+import { SearchButton } from './SearchButton/SearchButton'
+import theme from '@/config/theme/theme'
 
 interface SearchBarProps {
   showCategories?: boolean
@@ -20,10 +21,10 @@ const categories = [
   'Home'
 ]
 
-const SearchBarTest: React.FC<SearchBarProps> = ({
+export const SearchBar = ({
   showCategories = false,
   showSearchButton = false
-}) => {
+}: SearchBarProps) => {
   const [category, setCategory] = useState<string>(categories[0])
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
   const [searchText, setSearchText] = useState<string>('')
@@ -65,7 +66,9 @@ const SearchBarTest: React.FC<SearchBarProps> = ({
             height: showSearchButton ? '44px' : '46px',
             paddingLeft: showSearchButton ? '14px' : '0',
             ':hover .MuiOutlinedInput-notchedOutline': {
-              borderColor: showSearchButton ? 'transparent' : '#2b3445'
+              borderColor: showSearchButton
+                ? 'transparent'
+                : theme.palette.custom.black
             },
             '.MuiOutlinedInput-notchedOutline': {
               borderColor: showSearchButton ? 'transparent' : '#dae1e7'
@@ -103,5 +106,3 @@ const SearchBarTest: React.FC<SearchBarProps> = ({
     </Box>
   )
 }
-
-export default SearchBarTest

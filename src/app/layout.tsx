@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter'
-import ThemeProviderComponent from '@/config/theme/ThemeProviderComponent'
+import ThemeProviderComponent from '@/app/ThemeProviderComponent'
 import './globals.css'
 
 export const metadata: Metadata = {
