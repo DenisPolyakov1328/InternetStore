@@ -6,7 +6,7 @@ import { SearchIconWithBox } from './SearchIconWithBox/SearchIconWithBox'
 import { CategoryMenu } from './CategoryMenu/CategoryMenu'
 import { CategoryButton } from './CategoryButton/CategoryButton'
 import { SearchButton } from './SearchButton/SearchButton'
-import theme from '@/config/theme/theme'
+import theme from '@/shared/theme/theme'
 
 interface SearchBarProps {
   showCategories?: boolean

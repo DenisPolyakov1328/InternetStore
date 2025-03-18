@@ -3,8 +3,8 @@
 import { ThemeProvider } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
 import { CacheProvider } from '@emotion/react'
-import theme from '../config/theme/theme'
-import createEmotionCache from '@/utils/createEmotionCache'
+import theme from '@/shared/theme/theme'
+import { createEmotionCache } from '@/shared/lib/createEmotionCache'
 
 const clientSideEmotionCache = createEmotionCache()
 

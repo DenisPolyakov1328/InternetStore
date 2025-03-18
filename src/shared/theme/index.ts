@@ -1,0 +1,1 @@
+export { publicSans } from './fontTheme';
