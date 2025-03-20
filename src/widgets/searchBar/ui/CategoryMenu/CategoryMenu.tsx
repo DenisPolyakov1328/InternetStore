@@ -23,7 +23,7 @@ export const CategoryMenu = ({
         '.MuiPaper-root': {
           mt: '8px',
           minWidth: '180px',
-          boxShadow: 'rgba(43, 52, 69, 0.05) 0px 0px 24px 0px'
+          boxShadow: '#2b34450d 0px 0px 24px 0px'
         }
       }}
     >

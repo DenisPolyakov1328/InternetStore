@@ -7,10 +7,10 @@ export const textFieldTheme: Components<Theme>['MuiTextField'] = {
                 padding: 0,
                 overflow: 'hidden',
                 cursor: 'text',
-                color: theme.palette.custom.black,
+                color: theme.palette.secondary.main,
                 borderRadius: '8px',
                 border: '0px solid',
-                backgroundColor: theme.palette.custom.background.inputGray,
+                backgroundColor: theme.palette.grey[300],
                 '.MuiOutlinedInput-input': {
                     padding: '8.5px 0',
                     height: '1.8em'

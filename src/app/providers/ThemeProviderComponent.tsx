@@ -1,10 +1,11 @@
 'use client'
 
-import { ThemeProvider } from '@mui/material/styles'
-import CssBaseline from '@mui/material/CssBaseline'
+import { CssBaseline, ThemeProvider as MuiThemeProvider } from '@mui/material'
+import { useMemo } from 'react'
 import { CacheProvider } from '@emotion/react'
-import theme from '@/shared/theme/theme'
+// import theme from '@/shared/theme/theme'
 import { createEmotionCache } from '@/shared/lib/createEmotionCache'
+import { createMuiTheme } from './../../shared/theme/temeTest'
 
 const clientSideEmotionCache = createEmotionCache()
 
@@ -13,12 +14,14 @@ export default function ThemeProviderComponent({
 }: {
   children: React.ReactNode
 }) {
+  const theme = useMemo(() => createMuiTheme(), [])
+
   return (
     <CacheProvider value={clientSideEmotionCache}>
-      <ThemeProvider theme={theme}>
+      <MuiThemeProvider theme={theme}>
         <CssBaseline />
         {children}
-      </ThemeProvider>
+      </MuiThemeProvider>
     </CacheProvider>
   )
 }

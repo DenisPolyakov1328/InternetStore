@@ -4,7 +4,7 @@ export const svgIconTheme: Components<Theme>['MuiSvgIcon'] = {
     styleOverrides: {
         root: ({ theme }) => ({
             fontSize: '17px',
-            color: theme.palette.custom.grey,
+            color: theme.palette.grey[800],
         }),
 
     }

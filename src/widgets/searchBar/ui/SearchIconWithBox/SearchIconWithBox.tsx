@@ -5,12 +5,12 @@ import SearchIcon from '@mui/icons-material/Search'
 export const SearchIconWithBox = () => {
   return (
     <Box
-      sx={{
+      sx={(theme) => ({
         display: 'grid',
         mr: '16px',
         paddingInline: '16px',
-        borderRight: '1px solid rgb(218, 225, 231)'
-      }}
+        borderRight: `1px solid ${theme.palette.custom.border}`
+      })}
     >
       <SearchIcon />
     </Box>

@@ -1,12 +1,12 @@
 import type { Components, Theme } from '@mui/material';
 
-export const selectTheme: Components<Theme>['MuiSelect'] = {
+export const iconButtonTheme: Components<Theme>['MuiIconButton'] = {
     styleOverrides: {
         root: ({ theme }) => ({
-            color: theme.palette.custom.grey,
+            color: theme.palette.grey[800],
             borderRadius: '12px',
             '&:hover': {
-                backgroundColor: theme.palette.custom.background.iconGrey,
+                backgroundColor: theme.palette.grey[700],
             }
         }),
 

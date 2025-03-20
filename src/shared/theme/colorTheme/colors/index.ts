@@ -1,4 +1,4 @@
 export * from './black'
-export * from './gray'
+export * from './grey'
 export * from './mono'
 export * from './red'

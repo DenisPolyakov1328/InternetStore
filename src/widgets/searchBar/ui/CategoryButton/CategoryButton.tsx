@@ -13,21 +13,22 @@ export const CategoryButton = ({
 }: CategoryButtonProps) => {
   return (
     <Button
+      variant="text"
       onClick={onCategoryClick}
-      sx={{
+      sx={(theme) => ({
         justifyContent: 'flex-end',
         gap: '4px',
         width: '160px',
         minWidth: '160px',
-        color: '#4B566B',
+        color: theme.palette.secondary.dark,
         padding: '0 24px',
         whiteSpace: 'pre',
-        borderLeft: '1px solid rgb(218, 225, 231)',
+        borderLeft: `1px solid ${theme.palette.custom.border}`,
         borderRadius: 0,
         ':hover': {
-          backgroundColor: '#F3F5F9'
+          backgroundColor: theme.palette.grey[300]
         }
-      }}
+      })}
     >
       {category}
       <KeyboardArrowDownIcon sx={{ fontSize: '20px' }} />

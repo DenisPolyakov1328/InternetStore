@@ -6,7 +6,6 @@ import { SearchIconWithBox } from './SearchIconWithBox/SearchIconWithBox'
 import { CategoryMenu } from './CategoryMenu/CategoryMenu'
 import { CategoryButton } from './CategoryButton/CategoryButton'
 import { SearchButton } from './SearchButton/SearchButton'
-import theme from '@/shared/theme/theme'
 
 interface SearchBarProps {
   showCategories?: boolean
@@ -61,24 +60,28 @@ export const SearchBar = ({
         value={searchText}
         onChange={handleSearchChange}
         fullWidth
-        sx={{
+        sx={(theme) => ({
           '.MuiOutlinedInput-root': {
             height: showSearchButton ? '44px' : '46px',
             paddingLeft: showSearchButton ? '14px' : '0',
             ':hover .MuiOutlinedInput-notchedOutline': {
               borderColor: showSearchButton
                 ? 'transparent'
-                : theme.palette.custom.black
+                : theme.palette.secondary.main
             },
             '.MuiOutlinedInput-notchedOutline': {
-              borderColor: showSearchButton ? 'transparent' : '#dae1e7'
+              borderColor: showSearchButton
+                ? 'transparent'
+                : theme.palette.custom.border
             },
             '&.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline':
               {
-                borderColor: showSearchButton ? 'transparent' : '#1f2937'
+                borderColor: showSearchButton
+                  ? 'transparent'
+                  : theme.palette.primary.main
               }
           }
-        }}
+        })}
         InputProps={{
           startAdornment: showCategories ? (
             <SearchIconWithBox />
