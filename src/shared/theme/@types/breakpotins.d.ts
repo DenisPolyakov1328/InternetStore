@@ -3,6 +3,7 @@ declare module '@mui/system/createTheme/createBreakpoints' {
         interface BreakpointOverrides {
             xs: true;
             sm: true;
+            smp: true;
             md: true;
             lg: true;
             lgp: true;

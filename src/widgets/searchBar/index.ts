@@ -1,1 +1,1 @@
-export * from './ui/searchBar'
+export * from './ui/SearchBar'

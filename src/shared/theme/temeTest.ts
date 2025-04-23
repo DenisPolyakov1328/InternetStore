@@ -5,6 +5,7 @@ import { createTheme } from '@mui/material';
 import { breakpoints } from './breakpoints';
 import { createColorTheme } from './colorTheme';
 import {
+    containerTheme,
     badgeTheme,
     buttonTheme,
     iconButtonTheme,
@@ -26,6 +27,7 @@ export const createMuiTheme = () => {
         },
         breakpoints,
         components: {
+            MuiContainer: containerTheme,
             MuiBadge: badgeTheme,
             MuiButton: buttonTheme,
             MuiIconButton: iconButtonTheme,
