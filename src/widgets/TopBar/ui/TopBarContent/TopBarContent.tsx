@@ -30,7 +30,7 @@ export const TopBarContent = ({ isAddIcon, toggleIcon }: Props) => {
         <MobileToggleButton isAddIcon={isAddIcon} toggleIcon={toggleIcon} />
         <Box
           sx={{
-            display: { sm: 'none', smp: 'flex' },
+            display: { xs: 'none', smp: 'flex' },
             justifyContent: 'center',
             alignItems: 'center',
             gap: '12px'

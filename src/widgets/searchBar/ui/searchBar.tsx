@@ -51,7 +51,8 @@ export const SearchBar = ({
         position: 'relative',
         maxWidth: '670px',
         marginLeft: 'auto',
-        marginRight: 'auto'
+        marginRight: 'auto',
+        flex: '1 1 0px'
       }}
     >
       <TextField
