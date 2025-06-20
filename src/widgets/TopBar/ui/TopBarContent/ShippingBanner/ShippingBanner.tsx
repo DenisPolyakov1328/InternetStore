@@ -6,7 +6,8 @@ export const ShippingBanner = () => {
       sx={{
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        gap: '8px'
       }}
     >
       <Chip
