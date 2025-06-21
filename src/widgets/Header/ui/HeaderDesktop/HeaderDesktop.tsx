@@ -4,10 +4,11 @@ import { Logo } from '@/shared/ui/Logo'
 import { HeaderActions } from '../HeaderActions/HeaderActions'
 
 interface HeaderDesktopProps {
+  isFixed?: boolean
   sx: SxProps<Theme>
 }
 
-export const HeaderDesktop = ({ sx = {} }: HeaderDesktopProps) => {
+export const HeaderDesktop = ({ isFixed, sx = {} }: HeaderDesktopProps) => {
   return (
     <>
       <Box
@@ -20,6 +21,7 @@ export const HeaderDesktop = ({ sx = {} }: HeaderDesktopProps) => {
         }}
       >
         <Logo />
+        {isFixed && <button>Категории</button>}
         <SearchBar showCategories={true} />
         <HeaderActions />
       </Box>

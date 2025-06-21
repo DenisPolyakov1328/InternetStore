@@ -1,19 +1,75 @@
 'use client'
 import { Box, Container } from '@mui/material'
+import { useEffect, useRef, useState } from 'react'
 import { HeaderDesktop } from './HeaderDesktop/HeaderDesktop'
 import { HeaderMobile } from './HeaderMobile/HeaderMobile'
 
+const HEADER_HEIGHT = 80
+
 export const Header = () => {
+  const sentinelRef = useRef<HTMLDivElement>(null)
+  const [isFixed, setIsFixed] = useState(false)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsFixed(!entry.isIntersecting)
+      },
+      {
+        root: null,
+        threshold: 0
+      }
+    )
+
+    if (sentinelRef.current) {
+      observer.observe(sentinelRef.current)
+    }
+
+    return () => {
+      if (sentinelRef.current) {
+        observer.unobserve(sentinelRef.current)
+      }
+    }
+  }, [])
+
   return (
-    <Box sx={{ paddingTop: 0 }}>
-      <Box sx={{ position: 'relative' }}>
-        <Box sx={{ height: '80px' }}>
-          <Container sx={{ display: 'block' }}>
-            <HeaderDesktop sx={{ display: { xs: 'none', lg: 'flex' } }} />
-            <HeaderMobile sx={{ display: { xs: 'flex', lg: 'none' } }} />
-          </Container>
-        </Box>
+    <>
+      <Box
+        sx={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          zIndex: 1500,
+          height: HEADER_HEIGHT,
+          bgcolor: 'background.paper',
+          boxShadow:
+            'rgba(43, 52, 69, 0.05) 0px 0px 24px, rgba(43, 52, 69, 0.05) 0px 3px 6px',
+          transform: isFixed ? 'translateY(0)' : 'translateY(-100%)',
+          opacity: isFixed ? 1 : 0,
+          transition: 'transform 0.4s ease'
+        }}
+      >
+        <Container sx={{ height: '100%', display: 'block' }}>
+          <HeaderDesktop
+            isFixed={true}
+            sx={{ display: { xs: 'none', lg: 'flex' } }}
+          />
+          <HeaderMobile sx={{ display: { xs: 'flex', lg: 'none' } }} />
+        </Container>
       </Box>
-    </Box>
+
+      <Box
+        ref={sentinelRef}
+        sx={{
+          height: HEADER_HEIGHT
+        }}
+      >
+        <Container sx={{ height: '100%', display: 'block' }}>
+          <HeaderDesktop sx={{ display: { xs: 'none', lg: 'flex' } }} />
+          <HeaderMobile sx={{ display: { xs: 'flex', lg: 'none' } }} />
+        </Container>
+      </Box>
+    </>
   )
 }

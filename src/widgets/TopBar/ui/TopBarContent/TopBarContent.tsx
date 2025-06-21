@@ -18,7 +18,8 @@ export const TopBarContent = ({ isAddIcon, toggleIcon }: Props) => {
         fontSize: '12px',
         height: '40px',
         color: theme.palette.primary.contrastText,
-        backgroundColor: theme.palette.secondary.main
+        backgroundColor: theme.palette.secondary.main,
+        transition: 'height 300ms ease'
       })}
     >
       <Container

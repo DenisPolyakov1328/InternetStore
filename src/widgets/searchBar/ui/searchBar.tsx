@@ -29,7 +29,11 @@ export const SearchBar = ({
   const [searchText, setSearchText] = useState<string>('')
 
   const handleCategoryClick = (event: MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget)
+    if (anchorEl) {
+      setAnchorEl(null)
+    } else {
+      setAnchorEl(event.currentTarget)
+    }
   }
 
   const handleCategoryClose = () => {

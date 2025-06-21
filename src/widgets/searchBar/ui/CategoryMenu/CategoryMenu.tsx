@@ -19,11 +19,16 @@ export const CategoryMenu = ({
       anchorEl={anchorEl}
       open={Boolean(anchorEl)}
       onClose={onClose}
-      sx={{
-        '.MuiPaper-root': {
-          mt: '8px',
-          minWidth: '180px',
-          boxShadow: '#2b34450d 0px 0px 24px 0px'
+      slotProps={{
+        root: {
+          sx: { zIndex: 2000 }
+        },
+        paper: {
+          sx: {
+            mt: 1,
+            minWidth: 180,
+            boxShadow: '#2b34450d 0 0 24px 0'
+          }
         }
       }}
     >
