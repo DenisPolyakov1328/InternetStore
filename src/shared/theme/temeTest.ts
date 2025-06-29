@@ -10,7 +10,8 @@ import {
     buttonTheme,
     iconButtonTheme,
     svgIconTheme,
-    textFieldTheme
+    textFieldTheme,
+    listItemButtonTheme
 } from './components';
 
 import { fontFamily } from './fontTheme';
@@ -32,7 +33,8 @@ export const createMuiTheme = () => {
             MuiButton: buttonTheme,
             MuiIconButton: iconButtonTheme,
             MuiSvgIcon: svgIconTheme,
-            MuiTextField: textFieldTheme
+            MuiTextField: textFieldTheme,
+            MuiListItemButton: listItemButtonTheme
         },
     });
 };

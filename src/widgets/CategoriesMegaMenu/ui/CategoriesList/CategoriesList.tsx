@@ -38,20 +38,10 @@ export const CategoriesList = ({
               key={cat.label}
               selected={hoveredCategory === index}
               onMouseEnter={() => onHover(index)}
-              sx={(theme) => ({
+              sx={{
                 height: '40px',
-                minWidth: '278px',
-                padding: '0 16px',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                transition: 'none',
-                '&.Mui-selected': {
-                  backgroundColor: theme.palette.grey[700]
-                },
-                '&.Mui-selected:hover': {
-                  backgroundColor: theme.palette.grey[700]
-                }
-              })}
+                minWidth: '278px'
+              }}
             >
               <ListItemIcon sx={{ minWidth: 0 }}>{cat.icon}</ListItemIcon>
               <ListItemText primary={cat.label} sx={{ paddingLeft: '12px' }} />
