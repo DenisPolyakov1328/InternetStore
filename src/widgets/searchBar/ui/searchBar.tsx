@@ -13,11 +13,12 @@ interface SearchBarProps {
 }
 
 const categories = [
-  'All Categories',
-  'Electronics',
-  'Clothing',
-  'Books',
-  'Home'
+  'Все категории',
+  'Одежда',
+  'Обувь',
+  'Нижнее белье',
+  'Аксессуары',
+  'Домашняя страница'
 ]
 
 export const SearchBar = ({
@@ -61,7 +62,7 @@ export const SearchBar = ({
     >
       <TextField
         variant="outlined"
-        placeholder="Searching for..."
+        placeholder="Поиск..."
         value={searchText}
         onChange={handleSearchChange}
         fullWidth

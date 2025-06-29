@@ -1,8 +1,7 @@
 'use client'
-import { Box, Container } from '@mui/material'
+import { Box } from '@mui/material'
 import { useEffect, useRef, useState } from 'react'
-import { HeaderDesktop } from './HeaderDesktop/HeaderDesktop'
-import { HeaderMobile } from './HeaderMobile/HeaderMobile'
+import { HeaderContent } from './HeaderContent/HeaderContent'
 
 const HEADER_HEIGHT = 80
 
@@ -50,13 +49,7 @@ export const Header = () => {
           transition: 'transform 0.4s ease'
         }}
       >
-        <Container sx={{ height: '100%', display: 'block' }}>
-          <HeaderDesktop
-            isFixed={true}
-            sx={{ display: { xs: 'none', lg: 'flex' } }}
-          />
-          <HeaderMobile sx={{ display: { xs: 'flex', lg: 'none' } }} />
-        </Container>
+        <HeaderContent isFixed={true} />
       </Box>
 
       <Box
@@ -65,10 +58,7 @@ export const Header = () => {
           height: HEADER_HEIGHT
         }}
       >
-        <Container sx={{ height: '100%', display: 'block' }}>
-          <HeaderDesktop sx={{ display: { xs: 'none', lg: 'flex' } }} />
-          <HeaderMobile sx={{ display: { xs: 'flex', lg: 'none' } }} />
-        </Container>
+        <HeaderContent />
       </Box>
     </>
   )

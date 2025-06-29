@@ -19,7 +19,7 @@ export const SearchButton = ({ onClick }: SearchButtonProps) => {
       })}
       onClick={onClick}
     >
-      Search
+      Поиск
     </Button>
   )
 }

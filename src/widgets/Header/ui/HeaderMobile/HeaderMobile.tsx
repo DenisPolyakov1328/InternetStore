@@ -5,7 +5,7 @@ import { CustomIconButton } from '@/shared/ui'
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined'
 
 interface HeaderMobileProps {
-  sx: SxProps<Theme>
+  sx?: SxProps<Theme>
 }
 
 export const HeaderMobile = ({ sx = {} }: HeaderMobileProps) => {

@@ -11,7 +11,7 @@ export const ShippingBanner = () => {
       }}
     >
       <Chip
-        label="HOT"
+        label="АКЦИЯ"
         sx={(theme) => ({
           color: theme.palette.primary.contrastText,
           backgroundColor: theme.palette.primary.main,
@@ -24,7 +24,7 @@ export const ShippingBanner = () => {
         })}
       ></Chip>
       <Box component="span" sx={{ fontSize: '12px' }}>
-        Free Express Shipping
+        Бесплатная экспресс-доставка
       </Box>
     </Box>
   )
