@@ -1,15 +1,21 @@
 'use client'
-import React, { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Box } from '@mui/material'
 import { categoriesArray } from '@/shared/data'
 import { CategoriesList } from './CategoriesList'
 import { CategorySubMenu } from './CategorySubMenu'
+import {
+   CategoriesTriggerButton,
+   CategoriesTriggerIconButton
+} from '@/widgets/CategoriesMegaMenu'
 
 interface CategoriesMegaMenuProps {
-   trigger: (props: { isOpen: boolean }) => React.ReactNode
+   openButton?: boolean
 }
 
-export const CategoriesMegaMenu = ({ trigger }: CategoriesMegaMenuProps) => {
+export const CategoriesMegaMenu = ({
+   openButton = false
+}: CategoriesMegaMenuProps) => {
    const [open, setOpen] = useState(false)
    const [hoveredCategory, setHoveredCategory] = useState<number | null>(null)
    const wrapperRef = useRef<HTMLDivElement>(null)
@@ -73,7 +79,11 @@ export const CategoriesMegaMenu = ({ trigger }: CategoriesMegaMenuProps) => {
                cursor: 'pointer'
             }}
          >
-            {trigger({ isOpen: open })}
+            {openButton ? (
+               <CategoriesTriggerButton isOpen={open} />
+            ) : (
+               <CategoriesTriggerIconButton />
+            )}
          </Box>
 
          <Box

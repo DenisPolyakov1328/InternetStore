@@ -2,10 +2,7 @@ import { SearchBar } from '@/widgets/SearchBar'
 import { Box, SxProps, Theme } from '@mui/material'
 import { HeaderActions } from '../HeaderActions/HeaderActions'
 import { Logo } from '@/shared/ui'
-import {
-   CategoriesMegaMenu,
-   CategoriesTriggerIconButton
-} from '@/widgets/CategoriesMegaMenu'
+import { CategoriesMegaMenu } from '@/widgets/CategoriesMegaMenu'
 
 interface HeaderDesktopProps {
    isFixed?: boolean
@@ -28,11 +25,7 @@ export const HeaderDesktop = ({
             }}
          >
             <Logo />
-            {isFixed && (
-               <CategoriesMegaMenu
-                  trigger={() => <CategoriesTriggerIconButton />}
-               />
-            )}
+            {isFixed && <CategoriesMegaMenu />}
             <SearchBar showCategories={true} />
             <HeaderActions />
          </Box>
