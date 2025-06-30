@@ -8,7 +8,10 @@ export const buttonTheme: Components<Theme>['MuiButton'] = {
       root: {
          fontSize: '14px',
          height: '100%',
-         textTransform: 'none'
+         borderRadius: '12px',
+         textTransform: 'none',
+         boxShadow: 'none',
+         '&:hover': { boxShadow: 'none' }
       }
    }
 }

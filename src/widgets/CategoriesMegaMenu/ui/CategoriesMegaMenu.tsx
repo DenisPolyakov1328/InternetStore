@@ -63,10 +63,7 @@ export const CategoriesMegaMenu = ({
    }, [open])
 
    return (
-      <Box
-         sx={{ position: 'relative', display: 'inline-block' }}
-         ref={wrapperRef}
-      >
+      <Box sx={{ position: 'relative', cursor: 'pointer' }} ref={wrapperRef}>
          <Box
             onClick={() => {
                setOpen((prev) => !prev)
@@ -75,7 +72,7 @@ export const CategoriesMegaMenu = ({
             sx={{
                display: 'flex',
                alignItems: 'center',
-               marginLeft: '16px',
+               marginLeft: openButton ? 0 : '16px',
                cursor: 'pointer'
             }}
          >
@@ -89,7 +86,7 @@ export const CategoriesMegaMenu = ({
          <Box
             sx={{
                position: 'absolute',
-               top: 'calc(100% + 11px)',
+               top: 'calc(100% + 13px)',
                left: 0,
                zIndex: 10,
                display: 'flex',
