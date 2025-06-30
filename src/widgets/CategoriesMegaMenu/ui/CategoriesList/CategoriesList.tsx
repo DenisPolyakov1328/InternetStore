@@ -8,7 +8,7 @@ import {
   Collapse
 } from '@mui/material'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight'
-import { Category } from './../../model/types'
+import { Category } from '@/shared/types'
 
 interface CategoriesListProps {
   categories: Category[]

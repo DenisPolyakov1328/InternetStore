@@ -2,10 +2,10 @@
 import React, { useState, MouseEvent } from 'react'
 import { Box, TextField } from '@mui/material'
 import SearchIcon from '@mui/icons-material/Search'
-import { SearchIconWithBox } from './SearchIconWithBox/SearchIconWithBox'
-import { CategoryMenu } from './CategoryMenu/CategoryMenu'
-import { CategoryButton } from './CategoryButton/CategoryButton'
-import { SearchButton } from './SearchButton/SearchButton'
+import { SearchIconWithBox } from './SearchIconWithBox'
+import { CategoryButton } from './CategoryButton'
+import { SearchButton } from './SearchButton'
+import { CategoryMenu } from './CategoryMenu'
 
 interface SearchBarProps {
   showCategories?: boolean

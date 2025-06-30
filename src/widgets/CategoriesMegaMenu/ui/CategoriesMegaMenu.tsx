@@ -1,9 +1,9 @@
 'use client'
 import React, { useState, useRef, useEffect } from 'react'
 import { Box } from '@mui/material'
-import { categories } from '../model/categories'
-import { CategoriesList } from './CategoriesList/CategoriesList'
-import { CategorySubMenu } from './CategorySubMenu/CategorySubMenu'
+import { categoriesArray } from '@/shared/data'
+import { CategoriesList } from './CategoriesList'
+import { CategorySubMenu } from './CategorySubMenu'
 
 interface CategoriesMegaMenuProps {
   trigger: (props: { isOpen: boolean }) => React.ReactNode
@@ -17,8 +17,8 @@ export const CategoriesMegaMenu = ({ trigger }: CategoriesMegaMenuProps) => {
   const activeCategory =
     hoveredCategory !== null &&
     hoveredCategory >= 0 &&
-    hoveredCategory < categories.length
-      ? categories[hoveredCategory]
+    hoveredCategory < categoriesArray.length
+      ? categoriesArray[hoveredCategory]
       : null
 
   useEffect(() => {
@@ -88,7 +88,7 @@ export const CategoriesMegaMenu = ({ trigger }: CategoriesMegaMenuProps) => {
         onMouseLeave={() => setHoveredCategory(null)}
       >
         <CategoriesList
-          categories={categories}
+          categories={categoriesArray}
           open={open}
           hoveredCategory={hoveredCategory}
           onHover={setHoveredCategory}

@@ -4,9 +4,9 @@ import FitnessCenterIcon from '@mui/icons-material/FitnessCenter'
 import NewReleasesIcon from '@mui/icons-material/NewReleases'
 import LocalOfferIcon from '@mui/icons-material/LocalOffer'
 import { Footprints } from 'lucide-react'
-import { Category } from '../model/types'
+import { Category } from '@/shared/types'
 
-export const categories: Category[] = [
+export const categoriesArray: Category[] = [
   {
     label: 'Одежда',
     icon: <DryCleaningIcon />,

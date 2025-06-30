@@ -1,8 +1,8 @@
 'use client'
 import { useState } from 'react'
 import { socialLinksBase } from '@/shared/data'
-import { TopBarContent } from './TopBarContent/TopBarContent'
-import { MobileBar } from './MobileBar/MobileBar'
+import { TopBarContent } from './TopBarContent'
+import { MobileBar } from './MobileBar'
 
 export const TopBar = () => {
   const [isAddIcon, setIsAddIcon] = useState(true)

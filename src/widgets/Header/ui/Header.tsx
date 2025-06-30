@@ -1,7 +1,7 @@
 'use client'
-import { Box } from '@mui/material'
 import { useEffect, useRef, useState } from 'react'
-import { HeaderContent } from './HeaderContent/HeaderContent'
+import { Box } from '@mui/material'
+import { HeaderContent } from './HeaderContent'
 
 const HEADER_HEIGHT = 80
 

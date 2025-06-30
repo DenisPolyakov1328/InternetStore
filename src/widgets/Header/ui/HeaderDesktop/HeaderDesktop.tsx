@@ -1,9 +1,11 @@
 import { SearchBar } from '@/widgets/SearchBar'
 import { Box, SxProps, Theme } from '@mui/material'
-import { Logo } from '@/shared/ui/Logo'
 import { HeaderActions } from '../HeaderActions/HeaderActions'
-import { CategoriesMegaMenu } from '@/widgets/CategoriesMegaMenu'
-import { CategoriesTriggerIconButton } from '@/widgets/CategoriesMegaMenu/ui/CategoriesTriggerIconButton/CategoriesTriggerIconButton'
+import { Logo } from '@/shared/ui'
+import {
+  CategoriesMegaMenu,
+  CategoriesTriggerIconButton
+} from '@/widgets/CategoriesMegaMenu'
 
 interface HeaderDesktopProps {
   isFixed?: boolean

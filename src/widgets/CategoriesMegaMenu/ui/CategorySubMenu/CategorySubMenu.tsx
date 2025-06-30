@@ -8,8 +8,8 @@ import {
   ListItemText
 } from '@mui/material'
 import Grid from '@mui/material/Grid2'
-import { SubCategoryGroup } from '../../model/types'
-import { PromoBlockWithAnimation } from '@/shared/ui/PromoBlockWithAnimation'
+import { SubCategoryGroup } from '@/shared/types'
+import { PromoBlockWithAnimation } from '@/shared/ui'
 
 interface CategorySubMenuProps {
   subCategories: SubCategoryGroup[]

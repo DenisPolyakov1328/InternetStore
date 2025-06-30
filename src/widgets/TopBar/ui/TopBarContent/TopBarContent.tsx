@@ -2,8 +2,8 @@ import { Box, Container } from '@mui/material'
 import { socialLinksBase } from '@/shared/data'
 import { SocialLinks } from '@/shared/ui'
 import type { LinkItem } from '@/shared/types'
-import { ShippingBanner } from './ShippingBanner/ShippingBanner'
-import { MobileToggleButton } from './MobileToggleButton/MobileToggleButton'
+import { ShippingBanner } from './ShippingBanner'
+import { MobileToggleButton } from './MobileToggleButton'
 
 interface Props {
   isAddIcon: boolean

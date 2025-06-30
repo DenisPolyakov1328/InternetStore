@@ -1,4 +1,4 @@
-import { CustomIconButton } from '@/shared/ui/CustomIconButton'
+import { CustomIconButton } from '@/shared/ui'
 import { Box, Badge, SxProps, Theme } from '@mui/material'
 import SearchIcon from '@mui/icons-material/Search'
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined'

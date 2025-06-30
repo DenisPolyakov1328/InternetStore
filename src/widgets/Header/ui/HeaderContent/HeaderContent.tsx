@@ -1,6 +1,6 @@
 import { Container } from '@mui/material'
-import { HeaderDesktop } from './../HeaderDesktop/HeaderDesktop'
-import { HeaderMobile } from './../HeaderMobile/HeaderMobile'
+import { HeaderDesktop } from '../HeaderDesktop'
+import { HeaderMobile } from '../HeaderMobile'
 
 interface HeaderContentProps {
   isFixed?: boolean

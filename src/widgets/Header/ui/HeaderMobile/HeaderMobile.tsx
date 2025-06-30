@@ -1,8 +1,8 @@
 import { Box, SxProps, Theme } from '@mui/material'
-import { Logo } from '@/shared/ui/Logo'
-import { HeaderActions } from '../HeaderActions/HeaderActions'
+import { Logo } from '@/shared/ui'
 import { CustomIconButton } from '@/shared/ui'
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined'
+import { HeaderActions } from '../HeaderActions'
 
 interface HeaderMobileProps {
   sx?: SxProps<Theme>
