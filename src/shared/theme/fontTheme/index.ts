@@ -1,1 +1,1 @@
-export * from './fontTheme';
+export * from './fontTheme'

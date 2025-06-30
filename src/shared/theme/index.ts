@@ -1,1 +1,1 @@
-export { publicSans } from './fontTheme';
+export { publicSans } from './fontTheme'

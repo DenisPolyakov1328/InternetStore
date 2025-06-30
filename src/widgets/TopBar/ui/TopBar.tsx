@@ -5,20 +5,20 @@ import { TopBarContent } from './TopBarContent'
 import { MobileBar } from './MobileBar'
 
 export const TopBar = () => {
-  const [isAddIcon, setIsAddIcon] = useState(true)
+   const [isAddIcon, setIsAddIcon] = useState(true)
 
-  const handleClick = () => {
-    setIsAddIcon((prev) => !prev)
-  }
+   const handleClick = () => {
+      setIsAddIcon((prev) => !prev)
+   }
 
-  return (
-    <>
-      <TopBarContent
-        isAddIcon={isAddIcon}
-        toggleIcon={handleClick}
-        links={socialLinksBase}
-      />
-      <MobileBar isAddIcon={isAddIcon} links={socialLinksBase} />
-    </>
-  )
+   return (
+      <>
+         <TopBarContent
+            isAddIcon={isAddIcon}
+            toggleIcon={handleClick}
+            links={socialLinksBase}
+         />
+         <MobileBar isAddIcon={isAddIcon} links={socialLinksBase} />
+      </>
+   )
 }

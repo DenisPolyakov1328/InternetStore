@@ -3,40 +3,40 @@ import AddIcon from '@mui/icons-material/Add'
 import RemoveIcon from '@mui/icons-material/Remove'
 
 interface Props {
-  isAddIcon: boolean
-  toggleIcon: () => void
+   isAddIcon: boolean
+   toggleIcon: () => void
 }
 
 export const MobileToggleButton = ({ isAddIcon, toggleIcon }: Props) => {
-  return (
-    <IconButton
-      disableRipple
-      onClick={toggleIcon}
-      sx={{
-        display: { sm: 'inline-flex', smp: 'none' },
-        height: '40px',
-        padding: 0,
-        '&:hover': {
-          backgroundColor: 'transparent'
-        },
-        '&:focus': {
-          outline: 'none'
-        }
-      }}
-    >
-      {isAddIcon ? (
-        <AddIcon
-          sx={(theme) => ({
-            color: theme.palette.primary.contrastText
-          })}
-        />
-      ) : (
-        <RemoveIcon
-          sx={(theme) => ({
-            color: theme.palette.primary.contrastText
-          })}
-        />
-      )}
-    </IconButton>
-  )
+   return (
+      <IconButton
+         disableRipple
+         onClick={toggleIcon}
+         sx={{
+            display: { sm: 'inline-flex', smp: 'none' },
+            height: '40px',
+            padding: 0,
+            '&:hover': {
+               backgroundColor: 'transparent'
+            },
+            '&:focus': {
+               outline: 'none'
+            }
+         }}
+      >
+         {isAddIcon ? (
+            <AddIcon
+               sx={(theme) => ({
+                  color: theme.palette.primary.contrastText
+               })}
+            />
+         ) : (
+            <RemoveIcon
+               sx={(theme) => ({
+                  color: theme.palette.primary.contrastText
+               })}
+            />
+         )}
+      </IconButton>
+   )
 }
