@@ -1,12 +1,14 @@
-import { Palette, PaletteOptions } from '@mui/material/styles'
-
-interface CustomPalette {
-   custom: {
-      border: string
-   }
-}
+import '@mui/material/styles'
 
 declare module '@mui/material/styles' {
-   interface Palette extends CustomPalette {}
-   interface PaletteOptions extends CustomPalette {}
+   interface Palette {
+      custom: {
+         border: string
+      }
+   }
+   interface PaletteOptions {
+      custom?: {
+         border?: string
+      }
+   }
 }

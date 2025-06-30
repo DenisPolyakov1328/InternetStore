@@ -16,13 +16,14 @@ export const PromoBlockWithAnimation = ({
    buttonText,
    animationPath = '/AnimationSale.json'
 }: PromoBlockWithAnimationProps) => {
-   const [animationData, setAnimationData] = useState<any>(null)
+   const [animationData, setAnimationData] = useState<object | null>(null)
 
    useEffect(() => {
       fetch(animationPath)
          .then((res) => res.json())
          .then(setAnimationData)
          .catch((err) => {
+            // eslint-disable-next-line no-console
             console.error('Ошибка при загрузке анимации:', err)
          })
    }, [])

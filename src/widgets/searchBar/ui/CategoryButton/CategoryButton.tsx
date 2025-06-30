@@ -21,7 +21,7 @@ export const CategoryButton = ({
             width: '160px',
             minWidth: '160px',
             color: theme.palette.secondary.dark,
-            padding: '0 24px',
+            padding: '0 17px',
             whiteSpace: 'pre',
             borderLeft: `1px solid ${theme.palette.custom.border}`,
             borderRadius: 0,
