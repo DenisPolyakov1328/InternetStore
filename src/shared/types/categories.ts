@@ -1,12 +1,14 @@
 import { ReactElement } from 'react'
 
 export interface SubCategoryGroup {
-   title: string
-   items: string[]
+  id: string
+  title: string
+  items: string[]
 }
 
 export interface Category {
-   label: string
-   icon: ReactElement
-   subCategories: SubCategoryGroup[]
+  id: string
+  label: string
+  icon?: ReactElement
+  subCategories?: SubCategoryGroup[]
 }

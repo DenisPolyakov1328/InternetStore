@@ -4,46 +4,46 @@ import CategoryIcon from '@mui/icons-material/Category'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight'
 
 interface CategoriesTriggerButtonProps {
-   isOpen: boolean
+  isOpen: boolean
 }
 
 export const CategoriesTriggerButton = ({
-   isOpen
+  isOpen
 }: CategoriesTriggerButtonProps) => {
-   return (
-      <Button
-         sx={(theme) => ({
-            width: '278px',
-            borderRadius: '8px',
-            padding: '6px 8px',
-            gap: '8px',
-            backgroundColor: theme.palette.grey[100],
-            color: theme.palette.secondary.main
-         })}
+  return (
+    <Button
+      sx={(theme) => ({
+        width: '278px',
+        borderRadius: '8px',
+        padding: '6px 8px',
+        gap: '8px',
+        backgroundColor: theme.palette.grey[100],
+        color: theme.palette.secondary.main
+      })}
+    >
+      <Box
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '8px',
+          flex: '1 1 0%'
+        }}
       >
-         <Box
-            sx={{
-               display: 'flex',
-               alignItems: 'center',
-               gap: '8px',
-               flex: '1 1 0%'
-            }}
-         >
-            <CategoryIcon
-               sx={(theme) => ({ color: theme.palette.info.main })}
-            />
-            <Typography variant="subtitle1">Категории</Typography>
-         </Box>
-         <Box
-            component="span"
-            sx={{
-               display: 'flex',
-               transition: 'transform 0.3s ease',
-               transform: isOpen ? 'rotate(90deg)' : 'rotate(0deg)'
-            }}
-         >
-            <KeyboardArrowRightIcon />
-         </Box>
-      </Button>
-   )
+        <CategoryIcon sx={(theme) => ({ color: theme.palette.info.main })} />
+        <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
+          Категории
+        </Typography>
+      </Box>
+      <Box
+        component="span"
+        sx={{
+          display: 'flex',
+          transition: 'transform 0.3s ease',
+          transform: isOpen ? 'rotate(90deg)' : 'rotate(0deg)'
+        }}
+      >
+        <KeyboardArrowRightIcon />
+      </Box>
+    </Button>
+  )
 }

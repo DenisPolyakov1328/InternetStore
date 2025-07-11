@@ -1,3 +1,3 @@
 export const red = {
-   100: '#e94560'
+  100: '#e94560'
 } as const

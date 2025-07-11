@@ -5,38 +5,38 @@ import { createTheme } from '@mui/material'
 import { breakpoints } from './breakpoints'
 import { createColorTheme } from './colorTheme'
 import {
-   containerTheme,
-   badgeTheme,
-   buttonTheme,
-   iconButtonTheme,
-   svgIconTheme,
-   textFieldTheme,
-   listItemButtonTheme,
-   paperTheme
+  containerTheme,
+  badgeTheme,
+  buttonTheme,
+  iconButtonTheme,
+  svgIconTheme,
+  textFieldTheme,
+  listItemButtonTheme,
+  paperTheme
 } from './components'
 
 import { fontFamily } from './fontTheme'
 
 export const createMuiTheme = () => {
-   const colorTheme = createColorTheme()
+  const colorTheme = createColorTheme()
 
-   return createTheme({
-      palette: colorTheme,
-      typography: {
-         allVariants: {
-            fontFamily
-         }
-      },
-      breakpoints,
-      components: {
-         MuiContainer: containerTheme,
-         MuiBadge: badgeTheme,
-         MuiButton: buttonTheme,
-         MuiIconButton: iconButtonTheme,
-         MuiSvgIcon: svgIconTheme,
-         MuiTextField: textFieldTheme,
-         MuiListItemButton: listItemButtonTheme,
-         MuiPaper: paperTheme
+  return createTheme({
+    palette: colorTheme,
+    typography: {
+      allVariants: {
+        fontFamily
       }
-   })
+    },
+    breakpoints,
+    components: {
+      MuiContainer: containerTheme,
+      MuiBadge: badgeTheme,
+      MuiButton: buttonTheme,
+      MuiIconButton: iconButtonTheme,
+      MuiSvgIcon: svgIconTheme,
+      MuiTextField: textFieldTheme,
+      MuiListItemButton: listItemButtonTheme,
+      MuiPaper: paperTheme
+    }
+  })
 }
