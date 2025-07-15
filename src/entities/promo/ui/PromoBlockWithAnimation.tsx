@@ -26,7 +26,7 @@ export const PromoBlockWithAnimation = ({
         // eslint-disable-next-line no-console
         console.error('Ошибка при загрузке анимации:', err)
       })
-  }, [])
+  }, [animationPath])
 
   return (
     <Box
