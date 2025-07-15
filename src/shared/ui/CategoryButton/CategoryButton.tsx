@@ -20,13 +20,13 @@ export const CategoryButton = ({
         gap: '4px',
         width: '160px',
         minWidth: '160px',
-        color: theme.palette.secondary.dark,
+        color: 'secondary.dark',
         padding: '0 17px',
         whiteSpace: 'pre',
         borderLeft: `1px solid ${theme.palette.custom.border}`,
         borderRadius: 0,
         ':hover': {
-          backgroundColor: theme.palette.grey[300]
+          backgroundColor: 'grey.300'
         }
       })}
     >

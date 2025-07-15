@@ -16,10 +16,11 @@ export const palette: PaletteOptions = {
     contrastText: mono[0]
   },
   error: {
-    main: red[100]
+    main: red[200]
   },
   warning: {
-    main: red[100]
+    main: red[200],
+    light: red[100]
   },
   info: {
     main: black[500]
@@ -47,6 +48,8 @@ export const palette: PaletteOptions = {
     900: grey[900]
   },
   custom: {
-    border: mono[100]
+    border: mono[100],
+    footer: black[600],
+    social: black[700]
   }
 }

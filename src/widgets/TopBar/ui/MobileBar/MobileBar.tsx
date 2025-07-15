@@ -17,7 +17,7 @@ export const MobileBar = ({ isSocialOpen, links }: Props) => {
           height: isSocialOpen ? 0 : '40px',
           transition: 'height 0.3s ease, opacity 0.3s ease',
           opacity: isSocialOpen ? 0 : 1,
-          backgroundColor: (theme) => theme.palette.secondary.main
+          backgroundColor: 'secondary.main'
         }}
       >
         <Container sx={{ gap: '12px' }}>

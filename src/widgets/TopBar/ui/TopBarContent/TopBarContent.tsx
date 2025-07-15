@@ -1,17 +1,20 @@
 import { Box, Container } from '@mui/material'
-import { socialLinksBase } from '@/shared/data'
 import { SocialLinks } from '@/shared/ui'
 import type { LinkItem } from '@/shared/types'
 import { ShippingBanner } from '../ShippingBanner'
 import { MobileToggleButton } from '../MobileToggleButton'
 
-interface Props {
+interface TopBarContentProps {
   isSocialOpen: boolean
   toggleIcon: () => void
   links: LinkItem[]
 }
 
-export const TopBarContent = ({ isSocialOpen, toggleIcon }: Props) => {
+export const TopBarContent = ({
+  isSocialOpen,
+  toggleIcon,
+  links
+}: TopBarContentProps) => {
   return (
     <Box
       sx={(theme) => ({
@@ -40,7 +43,7 @@ export const TopBarContent = ({ isSocialOpen, toggleIcon }: Props) => {
             gap: '12px'
           }}
         >
-          <SocialLinks links={socialLinksBase} />
+          <SocialLinks links={links} />
         </Box>
       </Container>
     </Box>

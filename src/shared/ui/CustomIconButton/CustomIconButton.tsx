@@ -1,4 +1,4 @@
-import { IconButton } from '@mui/material'
+import { IconButton, SxProps, Theme } from '@mui/material'
 import { SvgIconComponent } from '@mui/icons-material'
 import { ElementType, MouseEventHandler } from 'react'
 
@@ -7,17 +7,21 @@ interface CustomIconButtonProps {
   component?: ElementType
   icon: SvgIconComponent
   onClick?: MouseEventHandler<HTMLButtonElement>
+  sx?: SxProps<Theme>
+  iconSx?: SxProps<Theme>
 }
 
 export const CustomIconButton = ({
   href,
   component = 'button',
   icon: Icon,
-  onClick
+  onClick,
+  sx,
+  iconSx
 }: CustomIconButtonProps) => {
   return (
-    <IconButton href={href} component={component} onClick={onClick}>
-      <Icon sx={{ fontSize: '24px' }} />
+    <IconButton href={href} component={component} onClick={onClick} sx={sx}>
+      <Icon sx={{ fontSize: '24px', ...iconSx }} />
     </IconButton>
   )
 }

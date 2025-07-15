@@ -8,15 +8,14 @@ interface SearchButtonProps {
 export const SearchButton = ({ onClick }: SearchButtonProps) => {
   return (
     <Button
-      color="primary"
-      sx={(theme) => ({
-        color: theme.palette.primary.contrastText,
+      sx={{
+        color: 'primary.contrastText',
         borderRadius: 0,
         padding: '6px 48px',
         ':hover': {
-          backgroundColor: theme.palette.primary.light
+          backgroundColor: 'primary.light'
         }
-      })}
+      }}
       onClick={onClick}
     >
       Поиск

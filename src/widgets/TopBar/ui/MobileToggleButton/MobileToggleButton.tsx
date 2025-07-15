@@ -26,15 +26,15 @@ export const MobileToggleButton = ({ isSocialOpen, toggleIcon }: Props) => {
     >
       {isSocialOpen ? (
         <AddIcon
-          sx={(theme) => ({
-            color: theme.palette.primary.contrastText
-          })}
+          sx={{
+            color: 'primary.contrastText'
+          }}
         />
       ) : (
         <RemoveIcon
-          sx={(theme) => ({
-            color: theme.palette.primary.contrastText
-          })}
+          sx={{
+            color: 'primary.contrastText'
+          }}
         />
       )}
     </IconButton>

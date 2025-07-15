@@ -19,10 +19,10 @@ export const CategoriesCollapseList = ({
   return (
     <Paper
       elevation={3}
-      sx={(theme) => ({
+      sx={{
         borderRadius: '8px',
-        color: theme.palette.secondary.main
-      })}
+        color: 'secondary.main'
+      }}
     >
       <Collapse in={open} orientation="vertical" timeout={250} unmountOnExit>
         <CategoriesList

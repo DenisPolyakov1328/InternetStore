@@ -12,14 +12,14 @@ export const CategoriesTriggerButton = ({
 }: CategoriesTriggerButtonProps) => {
   return (
     <Button
-      sx={(theme) => ({
+      sx={{
         width: '278px',
         borderRadius: '8px',
         padding: '6px 8px',
         gap: '8px',
-        backgroundColor: theme.palette.grey[100],
-        color: theme.palette.secondary.main
-      })}
+        backgroundColor: 'grey.100',
+        color: 'secondary.main'
+      }}
     >
       <Box
         sx={{
@@ -29,7 +29,7 @@ export const CategoriesTriggerButton = ({
           flex: '1 1 0%'
         }}
       >
-        <CategoryIcon sx={(theme) => ({ color: theme.palette.info.main })} />
+        <CategoryIcon sx={{ color: 'info.main' }} />
         <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
           Категории
         </Typography>

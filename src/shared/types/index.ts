@@ -1,2 +1,5 @@
 export * from './LinkItem'
 export * from './categories'
+export * from './footer'
+export * from './SocialLink'
+export * from './navItem'

@@ -54,28 +54,22 @@ export const SearchBar = ({
         value={searchText}
         onChange={handleSearchChange}
         fullWidth
-        sx={(theme) => ({
+        sx={{
           '.MuiOutlinedInput-root': {
             height: showSearchButton ? '44px' : '46px',
             paddingLeft: showSearchButton ? '14px' : '0',
             ':hover .MuiOutlinedInput-notchedOutline': {
-              borderColor: showSearchButton
-                ? 'transparent'
-                : theme.palette.secondary.main
+              borderColor: showSearchButton ? 'transparent' : 'secondary.main'
             },
             '.MuiOutlinedInput-notchedOutline': {
-              borderColor: showSearchButton
-                ? 'transparent'
-                : theme.palette.custom.border
+              borderColor: showSearchButton ? 'transparent' : 'custom.border'
             },
             '&.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline':
               {
-                borderColor: showSearchButton
-                  ? 'transparent'
-                  : theme.palette.primary.main
+                borderColor: showSearchButton ? 'transparent' : 'primary.main'
               }
           }
-        })}
+        }}
         InputProps={{
           startAdornment: showCategories ? (
             <SearchIconWithBox />

@@ -33,7 +33,7 @@ export const PromoBlockWithAnimation = ({
       sx={{
         width: '100%',
         height: '100%',
-        backgroundColor: '#fcefe6',
+        backgroundColor: 'warning.light',
         borderRadius: 2,
         p: '20px 10px',
         display: 'flex',

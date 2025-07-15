@@ -6,9 +6,15 @@ interface LogoProps {
   href?: string
   component?: ElementType
   sx?: SxProps<Theme>
+  src?: string
 }
 
-export const Logo = ({ href, component = 'div', sx = {} }: LogoProps) => {
+export const Logo = ({
+  href,
+  component = 'div',
+  sx = {},
+  src = '/KAPPEL_MARC.svg'
+}: LogoProps) => {
   return (
     <Box
       href={href}
@@ -17,16 +23,11 @@ export const Logo = ({ href, component = 'div', sx = {} }: LogoProps) => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        cursor: 'pointer',
         ...sx
       }}
     >
-      <Image
-        src="/KAPPEL_MARC.svg"
-        alt="Логотип"
-        width={105}
-        height={63}
-        priority
-      />
+      <Image src={src} alt="Логотип" width={105} height={63} priority />
     </Box>
   )
 }

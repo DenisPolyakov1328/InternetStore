@@ -1,4 +1,6 @@
-export const navItems = [
+import { NavItem } from '@/shared/types'
+
+export const navItems: NavItem[] = [
   {
     id: 'main',
     title: 'Главная',

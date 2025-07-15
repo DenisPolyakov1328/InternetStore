@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import { socialLinksBase } from '@/shared/data'
+import { socialLinksBase } from '@/shared/config'
 import { TopBarContent } from './TopBarContent'
 import { MobileBar } from './MobileBar'
 

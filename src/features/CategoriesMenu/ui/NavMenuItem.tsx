@@ -2,12 +2,12 @@
 import React, { useState } from 'react'
 import { Box, Paper, Typography } from '@mui/material'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
-import { Category } from '@/shared/types'
+import { SubCategory } from '@/shared/types'
 import { CategoriesList } from '@/shared/ui'
 
 interface NavMenuItemProps {
   title: string
-  subCategories: Category[]
+  subCategories: SubCategory[]
 }
 
 export const NavMenuItem = ({ title, subCategories }: NavMenuItemProps) => {
@@ -44,11 +44,11 @@ export const NavMenuItem = ({ title, subCategories }: NavMenuItemProps) => {
         >
           <Paper
             elevation={3}
-            sx={(theme) => ({
+            sx={{
               borderRadius: '8px',
-              color: theme.palette.secondary.main,
+              color: 'secondary.main',
               marginTop: '20px'
-            })}
+            }}
           >
             <CategoriesList
               categories={subCategories}

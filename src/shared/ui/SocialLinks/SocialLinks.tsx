@@ -16,10 +16,10 @@ export const SocialLinks = ({ links }: Props) => (
         rel="noopener noreferrer"
       >
         <Icon
-          sx={(theme) => ({
-            color: theme.palette.primary.contrastText,
+          sx={{
+            color: 'primary.contrastText',
             fontSize: '16px'
-          })}
+          }}
         />
       </Link>
     ))}

@@ -32,7 +32,7 @@ export const Header = () => {
   }, [])
 
   return (
-    <>
+    <Box component="header">
       <Box
         sx={{
           position: 'fixed',
@@ -60,6 +60,6 @@ export const Header = () => {
       >
         <HeaderContent />
       </Box>
-    </>
+    </Box>
   )
 }

@@ -12,16 +12,16 @@ export const ShippingBanner = () => {
     >
       <Chip
         label="АКЦИЯ"
-        sx={(theme) => ({
-          color: theme.palette.primary.contrastText,
-          backgroundColor: theme.palette.primary.main,
+        sx={{
+          color: 'primary.contrastText',
+          backgroundColor: 'primary.main',
           height: '24px',
           fontFamily: 'inherit',
           '.MuiChip-label': {
             fontSize: '13px',
             fontWeight: '700'
           }
-        })}
+        }}
       ></Chip>
       <Box component="span" sx={{ fontSize: '12px' }}>
         Бесплатная экспресс-доставка

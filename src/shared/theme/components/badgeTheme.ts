@@ -6,7 +6,7 @@ export const badgeTheme: Components<Theme>['MuiBadge'] = {
       '.MuiBadge-standard': {
         fontFamily: 'inherit',
         fontSize: '12px',
-        color: 'white',
+        color: theme.palette.secondary.contrastText,
         backgroundColor: theme.palette.primary.main
       }
     })

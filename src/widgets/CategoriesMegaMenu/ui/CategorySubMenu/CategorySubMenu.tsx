@@ -3,7 +3,7 @@ import React from 'react'
 import { Paper } from '@mui/material'
 import Grid from '@mui/material/Grid2'
 import { SubCategoryGroup } from '@/shared/types'
-import { PromoBlockWithAnimation } from '@/shared/ui'
+import { PromoBlockWithAnimation } from '@/entities/promo/ui'
 import { CategorySubMenuGroup } from '@/widgets/CategoriesMegaMenu/ui/CategorySubMenuGroup'
 
 interface CategorySubMenuProps {
@@ -14,13 +14,13 @@ export const CategorySubMenu = ({ subCategories }: CategorySubMenuProps) => {
   return (
     <Paper
       elevation={5}
-      sx={(theme) => ({
+      sx={{
         minWidth: '760px',
         p: '10px 20px',
         borderRadius: '12px',
         ml: '16px',
-        color: theme.palette.secondary.main
-      })}
+        color: 'secondary.main'
+      }}
     >
       <Grid container spacing={4}>
         {subCategories.map((group) => (
