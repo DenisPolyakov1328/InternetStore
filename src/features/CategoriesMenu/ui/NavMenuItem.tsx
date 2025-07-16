@@ -23,7 +23,7 @@ export const NavMenuItem = ({ title, subCategories }: NavMenuItemProps) => {
         setHoveredCategory(null)
       }}
     >
-      <Box sx={{ display: 'flex', gap: '2.4px', cursor: 'pointer' }}>
+      <Box sx={{ display: 'flex', gap: 0.3, cursor: 'pointer' }}>
         <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
           {title}
         </Typography>
@@ -45,9 +45,9 @@ export const NavMenuItem = ({ title, subCategories }: NavMenuItemProps) => {
           <Paper
             elevation={3}
             sx={{
-              borderRadius: '8px',
+              borderRadius: 2,
               color: 'secondary.main',
-              marginTop: '20px'
+              marginTop: 2.5
             }}
           >
             <CategoriesList

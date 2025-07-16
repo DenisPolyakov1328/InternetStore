@@ -16,7 +16,8 @@ export const CategorySubMenuGroup = ({ group }: Props) => (
         <ListItemButton
           key={item}
           sx={{
-            p: '8px 0',
+            paddingY: 1,
+            paddingX: 0,
             ':hover': { backgroundColor: 'transparent' }
           }}
         >
@@ -24,7 +25,7 @@ export const CategorySubMenuGroup = ({ group }: Props) => (
             primary={item}
             sx={{
               m: 0,
-              '.MuiTypography-root': { fontSize: '14px' }
+              '.MuiTypography-root': { fontSize: 14 }
             }}
           />
         </ListItemButton>

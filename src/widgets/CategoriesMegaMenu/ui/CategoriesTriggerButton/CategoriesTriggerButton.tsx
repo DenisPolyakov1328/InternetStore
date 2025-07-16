@@ -13,10 +13,11 @@ export const CategoriesTriggerButton = ({
   return (
     <Button
       sx={{
-        width: '278px',
-        borderRadius: '8px',
-        padding: '6px 8px',
-        gap: '8px',
+        width: 278,
+        borderRadius: 2,
+        paddingY: 0.75,
+        paddingX: 1,
+        gap: 1,
         backgroundColor: 'grey.100',
         color: 'secondary.main'
       }}
@@ -25,7 +26,7 @@ export const CategoriesTriggerButton = ({
         sx={{
           display: 'flex',
           alignItems: 'center',
-          gap: '8px',
+          gap: 1,
           flex: '1 1 0%'
         }}
       >

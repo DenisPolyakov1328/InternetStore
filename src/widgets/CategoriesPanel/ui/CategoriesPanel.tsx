@@ -7,11 +7,11 @@ export const CategoriesPanel = () => {
   return (
     <Paper
       elevation={0}
-      sx={{ display: { xs: 'none', lg: 'block' }, height: '60px' }}
+      sx={{ display: { xs: 'none', lg: 'block' }, height: 60 }}
     >
       <Container sx={{ justifyContent: 'space-between' }}>
         <CategoriesMegaMenu openButton={true} />
-        <Box sx={{ display: 'flex', gap: '32px' }}>
+        <Box sx={{ display: 'flex', gap: 4 }}>
           {navItems.map((item) => (
             <NavMenuItem
               key={item.id}

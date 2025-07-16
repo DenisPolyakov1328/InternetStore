@@ -24,7 +24,7 @@ export const CategoriesList = ({
           selected={hoveredCategory === cat.id}
           onMouseEnter={() => onHover(cat.id)}
           sx={{
-            height: '40px',
+            height: 40,
             minWidth: minWidthValue,
             whiteSpace: 'nowrap'
           }}
@@ -34,7 +34,7 @@ export const CategoriesList = ({
           )}
           <ListItemText
             primary={cat.label}
-            sx={{ paddingLeft: cat.icon ? '12px' : 0 }}
+            sx={{ paddingLeft: cat.icon ? 1.5 : 0 }}
           />
           {cat.subCategories?.length ? <KeyboardArrowRightIcon /> : null}
         </ListItemButton>

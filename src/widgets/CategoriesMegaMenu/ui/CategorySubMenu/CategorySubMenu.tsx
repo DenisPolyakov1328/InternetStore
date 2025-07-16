@@ -15,10 +15,11 @@ export const CategorySubMenu = ({ subCategories }: CategorySubMenuProps) => {
     <Paper
       elevation={5}
       sx={{
-        minWidth: '760px',
-        p: '10px 20px',
-        borderRadius: '12px',
-        ml: '16px',
+        minWidth: 760,
+        paddingY: 1.25,
+        paddingX: 2.5,
+        borderRadius: 2,
+        ml: 2,
         color: 'secondary.main'
       }}
     >

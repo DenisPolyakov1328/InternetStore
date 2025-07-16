@@ -7,8 +7,8 @@ export const SearchIconWithBox = () => {
     <Box
       sx={(theme) => ({
         display: 'grid',
-        mr: '16px',
-        paddingInline: '16px',
+        mr: 2,
+        paddingInline: 2,
         borderRight: `1px solid ${theme.palette.custom.border}`
       })}
     >

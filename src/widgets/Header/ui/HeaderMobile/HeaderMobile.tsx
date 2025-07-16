@@ -15,7 +15,7 @@ export const HeaderMobile = ({ sx = {} }: HeaderMobileProps) => {
         height: '100%',
         justifyContent: 'space-between',
         alignItems: 'center',
-        gap: '2px',
+        gap: 0.25,
         ...sx
       }}
     >

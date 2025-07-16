@@ -42,7 +42,7 @@ export const SearchBar = ({
     <Box
       sx={{
         position: 'relative',
-        maxWidth: '670px',
+        maxWidth: 670,
         marginLeft: 'auto',
         marginRight: 'auto',
         flex: '1 1 0px'
@@ -74,7 +74,7 @@ export const SearchBar = ({
           startAdornment: showCategories ? (
             <SearchIconWithBox />
           ) : (
-            <SearchIcon sx={{ mr: '6px' }} />
+            <SearchIcon sx={{ mr: 0.75 }} />
           ),
           endAdornment: showCategories ? (
             <CategoryButton

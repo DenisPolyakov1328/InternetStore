@@ -20,7 +20,7 @@ export const CategoriesCollapseList = ({
     <Paper
       elevation={3}
       sx={{
-        borderRadius: '8px',
+        borderRadius: 2,
         color: 'secondary.main'
       }}
     >

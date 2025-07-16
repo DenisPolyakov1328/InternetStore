@@ -7,7 +7,7 @@ export const ShippingBanner = () => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        gap: '8px'
+        gap: 1
       }}
     >
       <Chip
@@ -15,15 +15,15 @@ export const ShippingBanner = () => {
         sx={{
           color: 'primary.contrastText',
           backgroundColor: 'primary.main',
-          height: '24px',
+          height: 24,
           fontFamily: 'inherit',
           '.MuiChip-label': {
-            fontSize: '13px',
-            fontWeight: '700'
+            fontSize: 13,
+            fontWeight: 700
           }
         }}
       ></Chip>
-      <Box component="span" sx={{ fontSize: '12px' }}>
+      <Box component="span" sx={{ fontSize: 12 }}>
         Бесплатная экспресс-доставка
       </Box>
     </Box>

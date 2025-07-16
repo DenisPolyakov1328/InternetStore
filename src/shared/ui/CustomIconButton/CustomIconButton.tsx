@@ -21,7 +21,7 @@ export const CustomIconButton = ({
 }: CustomIconButtonProps) => {
   return (
     <IconButton href={href} component={component} onClick={onClick} sx={sx}>
-      <Icon sx={{ fontSize: '24px', ...iconSx }} />
+      <Icon sx={{ fontSize: 24, ...iconSx }} />
     </IconButton>
   )
 }

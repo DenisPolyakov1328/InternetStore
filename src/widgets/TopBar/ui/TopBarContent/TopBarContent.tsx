@@ -17,13 +17,13 @@ export const TopBarContent = ({
 }: TopBarContentProps) => {
   return (
     <Box
-      sx={(theme) => ({
-        fontSize: '12px',
-        height: '40px',
-        color: theme.palette.primary.contrastText,
-        backgroundColor: theme.palette.secondary.main,
+      sx={{
+        fontSize: 12,
+        height: 40,
+        color: 'primary.contrastText',
+        backgroundColor: 'secondary.main',
         transition: 'height 300ms ease'
-      })}
+      }}
     >
       <Container
         sx={{
@@ -40,7 +40,7 @@ export const TopBarContent = ({
             display: { xs: 'none', smp: 'flex' },
             justifyContent: 'center',
             alignItems: 'center',
-            gap: '12px'
+            gap: 1.5
           }}
         >
           <SocialLinks links={links} />

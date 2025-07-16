@@ -18,7 +18,7 @@ export const SocialLinks = ({ links }: Props) => (
         <Icon
           sx={{
             color: 'primary.contrastText',
-            fontSize: '16px'
+            fontSize: 16
           }}
         />
       </Link>

@@ -22,7 +22,7 @@ export const FooterColumn = ({
       {column.title && (
         <Typography
           variant="h6"
-          sx={{ color: 'secondary.contrastText', mb: '12px' }}
+          sx={{ color: 'secondary.contrastText', mb: 1.5 }}
         >
           {column.title}
         </Typography>

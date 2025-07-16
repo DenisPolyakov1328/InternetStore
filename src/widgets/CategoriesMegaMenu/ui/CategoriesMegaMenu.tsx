@@ -42,7 +42,7 @@ export const CategoriesMegaMenu = ({
         sx={{
           display: 'flex',
           alignItems: 'center',
-          marginLeft: openButton ? 0 : '16px',
+          marginLeft: openButton ? 0 : 2,
           cursor: 'pointer'
         }}
       >

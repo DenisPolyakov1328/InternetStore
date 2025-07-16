@@ -20,19 +20,20 @@ export const StoreButton = ({
         sx={{
           display: 'flex',
           alignItems: 'center',
-          gap: '8px',
+          gap: 1,
           backgroundColor: 'text.primary',
           color: 'secondary.contrastText',
-          padding: '12px 16px',
-          margin: '8px',
-          borderRadius: '8px'
+          paddingY: 1.5,
+          paddingX: 2,
+          margin: 1,
+          borderRadius: 2
         }}
       >
         <Image src={icon} alt={title} width={24} height={24} />
         <Box>
           <Box
             component="p"
-            sx={{ fontSize: '8px', textAlign: 'left', lineHeight: 1 }}
+            sx={{ fontSize: 8, textAlign: 'left', lineHeight: 1 }}
           >
             {subtitle}
           </Box>

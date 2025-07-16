@@ -5,7 +5,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 
 export const CategoriesTriggerIconButton = () => {
   return (
-    <IconButton sx={{ borderRadius: '8px', padding: '6px 8px' }}>
+    <IconButton sx={{ borderRadius: 2, paddingY: 0.75, paddingX: 1 }}>
       <CategoryIcon />
       <KeyboardArrowDownIcon />
     </IconButton>

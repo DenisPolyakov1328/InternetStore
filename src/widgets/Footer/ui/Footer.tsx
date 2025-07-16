@@ -16,14 +16,12 @@ export const Footer = () => {
     <Box
       component="footer"
       sx={{
-        marginBottom: { xs: '56px', lgp: '0' },
+        marginBottom: { xs: 7, lgp: 0 },
         backgroundColor: 'custom.footer',
         color: 'grey.400'
       }}
     >
-      <Container
-        sx={{ paddingY: { xs: '32px', smp: '80px' }, display: 'block' }}
-      >
+      <Container sx={{ paddingY: { xs: 4, smp: 10 }, display: 'block' }}>
         <Grid container direction="row" spacing={3}>
           {footerColumns.map((column, index) => {
             const { withCustomContent } = column

@@ -14,7 +14,7 @@ export const MobileToggleButton = ({ isSocialOpen, toggleIcon }: Props) => {
       onClick={toggleIcon}
       sx={{
         display: { sm: 'inline-flex', smp: 'none' },
-        height: '40px',
+        height: 40,
         padding: 0,
         '&:hover': {
           backgroundColor: 'transparent'

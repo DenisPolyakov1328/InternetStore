@@ -8,7 +8,7 @@ export const FooterSocialLinksGroup = () => {
       sx={{
         display: 'flex',
         marginX: '-5px',
-        marginTop: '16px'
+        marginTop: 2
       }}
     >
       {extendedSocialLinks.map(({ icon, url }) => (
@@ -18,11 +18,11 @@ export const FooterSocialLinksGroup = () => {
           href={url}
           component="a"
           sx={{
-            padding: '10px',
-            margin: '4px',
+            padding: 1.25,
+            margin: 0.5,
             backgroundColor: 'custom.social'
           }}
-          iconSx={{ fontSize: '14px', color: 'secondary.contrastText' }}
+          iconSx={{ fontSize: 14, color: 'secondary.contrastText' }}
         />
       ))}
     </Box>

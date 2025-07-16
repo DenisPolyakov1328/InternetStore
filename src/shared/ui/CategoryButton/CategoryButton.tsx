@@ -17,11 +17,12 @@ export const CategoryButton = ({
       onClick={onCategoryClick}
       sx={(theme) => ({
         justifyContent: 'flex-end',
-        gap: '4px',
-        width: '160px',
-        minWidth: '160px',
+        gap: 0.5,
+        width: 160,
+        minWidth: 160,
         color: 'secondary.dark',
-        padding: '0 17px',
+        paddingY: 0,
+        paddingX: 2,
         whiteSpace: 'pre',
         borderLeft: `1px solid ${theme.palette.custom.border}`,
         borderRadius: 0,
@@ -31,7 +32,7 @@ export const CategoryButton = ({
       })}
     >
       {category}
-      <KeyboardArrowDownIcon sx={{ fontSize: '20px' }} />
+      <KeyboardArrowDownIcon sx={{ fontSize: 20 }} />
     </Button>
   )
 }
