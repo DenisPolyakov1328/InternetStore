@@ -16,7 +16,7 @@ export const Footer = () => {
     <Box
       component="footer"
       sx={{
-        marginBottom: { xs: 7, lgp: 0 },
+        marginBottom: { xs: 7, smp: 0 },
         backgroundColor: 'custom.footer',
         color: 'grey.400'
       }}

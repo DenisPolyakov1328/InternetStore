@@ -3,6 +3,7 @@ import { Header } from '@/widgets/Header'
 import { Box } from '@mui/material'
 import { CategoriesPanel } from '@/widgets/CategoriesPanel'
 import { Footer } from '@/widgets/Footer'
+import { BottomBar } from '@/widgets/BottomBar'
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
           <p key={i}>Это временный контент для проверки скролла #{i + 1}</p>
         ))}
       </Box>
+      <BottomBar />
       <Footer />
     </div>
   )

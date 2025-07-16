@@ -1,6 +1,6 @@
-import type { SvgIconComponent } from '@mui/icons-material'
+import { SvgIconComponent } from '@mui/icons-material'
 
-export type LinkItem = {
+export interface LinkItem {
   icon: SvgIconComponent
   url: string
 }

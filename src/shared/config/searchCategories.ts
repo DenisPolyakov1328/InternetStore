@@ -1,4 +1,4 @@
-export const searchCategories = [
+export const searchCategories: string[] = [
   'Все категории',
   'Одежда',
   'Обувь',

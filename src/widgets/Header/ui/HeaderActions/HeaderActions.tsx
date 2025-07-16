@@ -1,5 +1,6 @@
 import { CustomIconButton } from '@/shared/ui'
-import { Box, Badge, SxProps, Theme } from '@mui/material'
+import { Box, SxProps, Theme } from '@mui/material'
+import { BadgeWrapper } from '@/shared/ui/BadgeWrapper'
 import SearchIcon from '@mui/icons-material/Search'
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined'
 import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined'
@@ -21,13 +22,13 @@ export const HeaderActions = ({
         href="/Login"
         component="a"
       />
-      <Badge badgeContent="3">
+      <BadgeWrapper badgeContent={3}>
         <CustomIconButton
           icon={ShoppingBagOutlinedIcon}
           href="/cart"
           component="a"
         />
-      </Badge>
+      </BadgeWrapper>
     </Box>
   )
 }
