@@ -29,7 +29,8 @@ export const BottomBarItem = ({
           alignItems: 'center',
           justifyContent: 'center',
           flex: '1 1 0px',
-          fontSize: 13
+          fontSize: 13,
+          color: 'secondary.dark'
         }}
       >
         {withBadge ? (
