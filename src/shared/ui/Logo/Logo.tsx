@@ -13,7 +13,7 @@ export const Logo = ({
   href,
   component = 'div',
   sx = {},
-  src = '/KAPPEL_MARC.svg'
+  src = '/KAPPEL_MARC_BLACK.svg'
 }: LogoProps) => {
   return (
     <Box
