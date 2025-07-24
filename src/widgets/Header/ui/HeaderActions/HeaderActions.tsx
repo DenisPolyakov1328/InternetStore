@@ -3,7 +3,7 @@ import { Box, SxProps, Theme } from '@mui/material'
 import { BadgeWrapper } from '@/shared/ui/BadgeWrapper'
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined'
 import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined'
-import { MobileSearchDrawer } from '@/widgets/Header/ui/MobileSearchDrawer'
+import { MobileSearchTrigger } from '@/widgets/Header/ui/MobileSearchTrigger'
 
 interface HeaderActionsProps {
   isMobile?: boolean
@@ -16,7 +16,7 @@ export const HeaderActions = ({
 }: HeaderActionsProps) => {
   return (
     <Box sx={{ ...sx }}>
-      {isMobile && <MobileSearchDrawer />}
+      {isMobile && <MobileSearchTrigger />}
       <CustomIconButton
         icon={AccountCircleOutlinedIcon}
         href="/Login"
