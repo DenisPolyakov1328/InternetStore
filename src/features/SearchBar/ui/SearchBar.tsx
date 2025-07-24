@@ -66,7 +66,7 @@ export const SearchBar = ({
             },
             '&.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline':
               {
-                borderColor: showSearchButton ? 'transparent' : 'primary.main'
+                borderColor: 'primary.main'
               }
           }
         }}
