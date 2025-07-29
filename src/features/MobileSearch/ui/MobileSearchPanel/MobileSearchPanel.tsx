@@ -2,9 +2,9 @@ import React from 'react'
 import { Box, Typography } from '@mui/material'
 import { CustomIconButton } from '@/shared/ui'
 import CloseIcon from '@mui/icons-material/Close'
-import { SearchBar } from '@/features/SearchBar'
+import { SearchBar } from '@/shared/ui/SearchBar'
 
-export const MobileSearchContent = ({ onClose }: { onClose: () => void }) => (
+export const MobileSearchPanel = ({ onClose }: { onClose: () => void }) => (
   <Box sx={{ width: 'auto', padding: 2, height: '100vh' }}>
     <Box
       sx={{

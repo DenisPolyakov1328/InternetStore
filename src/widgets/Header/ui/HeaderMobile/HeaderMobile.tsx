@@ -1,7 +1,7 @@
 import { Box, SxProps, Theme } from '@mui/material'
 import { Logo } from '@/shared/ui'
 import { HeaderActions } from '../HeaderActions'
-import { BurgerMenu } from '@/widgets/BurgerMenu'
+import { BurgerMenu } from '@/features/BurgerMenu'
 
 interface HeaderMobileProps {
   sx?: SxProps<Theme>
