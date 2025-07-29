@@ -3,7 +3,7 @@ import { Box, SxProps, Theme } from '@mui/material'
 import { BadgeWrapper } from '@/shared/ui/BadgeWrapper'
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined'
 import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined'
-import { MobileSearchTrigger } from '@/widgets/Header/ui/MobileSearchTrigger'
+import { MobileSearchTrigger } from '@/widgets/MobileSearch/ui/MobileSearchTrigger'
 
 interface HeaderActionsProps {
   isMobile?: boolean

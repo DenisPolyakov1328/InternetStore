@@ -1,8 +1,7 @@
 import { Box, SxProps, Theme } from '@mui/material'
 import { Logo } from '@/shared/ui'
-import { CustomIconButton } from '@/shared/ui'
-import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined'
 import { HeaderActions } from '../HeaderActions'
+import { BurgerMenu } from '@/widgets/BurgerMenu'
 
 interface HeaderMobileProps {
   sx?: SxProps<Theme>
@@ -20,7 +19,7 @@ export const HeaderMobile = ({ sx = {} }: HeaderMobileProps) => {
       }}
     >
       <Box sx={{ flex: '1 1 0%' }}>
-        <CustomIconButton icon={MenuOutlinedIcon} />
+        <BurgerMenu />
       </Box>
       <Logo sx={{ display: 'block' }} component="a" href="/" />
       <HeaderActions

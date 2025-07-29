@@ -1,3 +1,9 @@
+.os-theme-light {
+  --os-handle-bg: #dae1e780;
+  --os-handle-bg-hover: #dae1e780;
+  --os-handle-bg-active: #dae1e780;
+}
+
 * {
   box-sizing: border-box;
   font-size: 14px;
