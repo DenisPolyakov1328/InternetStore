@@ -1,4 +1,4 @@
-import { SearchBar } from '@/features/SearchBar'
+import { SearchBar } from '@/shared/ui/SearchBar'
 import { Box, SxProps, Theme } from '@mui/material'
 import { HeaderActions } from '../HeaderActions/HeaderActions'
 import { Logo } from '@/shared/ui'
