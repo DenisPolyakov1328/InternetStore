@@ -6,6 +6,7 @@ declare module '@mui/system/createTheme/createBreakpoints' {
       smp: true
       md: true
       lg: true
+      custom: true
       lgp: true
       xl: true
       xxl: true

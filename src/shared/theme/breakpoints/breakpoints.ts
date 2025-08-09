@@ -7,6 +7,7 @@ export const breakpoints: BreakpointsOptions = {
     smp: 600, // small plus
     md: 768,
     lg: 1024,
+    custom: 1150,
     lgp: 1280,
     xl: 1440,
     xxl: 1920
