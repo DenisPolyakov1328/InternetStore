@@ -1,3 +1,4 @@
+'use client'
 import { Box, SxProps, Theme } from '@mui/material'
 import { Logo } from '@/shared/ui'
 import { HeaderActions } from '../HeaderActions'
@@ -21,7 +22,7 @@ export const HeaderMobile = ({ sx = {} }: HeaderMobileProps) => {
       <Box sx={{ flex: '1 1 0%' }}>
         <BurgerMenu />
       </Box>
-      <Logo sx={{ display: 'block' }} component="a" href="/" />
+      <Logo sx={{ display: 'block' }} href="/" priority={true} />
       <HeaderActions
         isMobile={true}
         sx={{

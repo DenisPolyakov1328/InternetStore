@@ -1,6 +1,6 @@
-import Link from 'next/link'
 import Image from 'next/image'
 import { Box, SxProps, Theme } from '@mui/material'
+import { NextLink } from '@/shared/ui'
 
 interface LogoProps {
   href?: string
@@ -16,7 +16,7 @@ export const Logo = ({
   priority = false
 }: LogoProps) => {
   return (
-    <Link href={href} style={{ display: 'inline-flex' }}>
+    <NextLink href={href} style={{ display: 'inline-flex' }}>
       <Box
         sx={{
           display: 'flex',
@@ -34,6 +34,6 @@ export const Logo = ({
           priority={priority}
         />
       </Box>
-    </Link>
+    </NextLink>
   )
 }

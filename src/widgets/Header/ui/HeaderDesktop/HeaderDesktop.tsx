@@ -23,7 +23,7 @@ export const HeaderDesktop = ({
         ...sx
       }}
     >
-      <Logo />
+      <Logo priority={true} />
       {isFixed && <CategoriesMegaMenu />}
       <SearchBar showCategories={true} />
       <HeaderActions />

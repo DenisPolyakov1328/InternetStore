@@ -19,7 +19,7 @@ export const HeaderActions = ({
       {isMobile && <MobileSearchTrigger />}
       <CustomIconButton
         icon={AccountCircleOutlinedIcon}
-        href="/Login"
+        href="/account"
         component="a"
       />
       <BadgeWrapper badgeContent={3}>

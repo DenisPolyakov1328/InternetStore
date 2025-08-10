@@ -5,7 +5,7 @@ export const navItems: NavItem[] = [
     id: 'main',
     title: 'Главная',
     subCategories: [
-      { id: 'main-home', label: 'Домашняя страница', href: '#' },
+      { id: 'main-home', label: 'Домашняя страница', href: '/' },
       { id: 'main-news', label: 'Новости', href: '#' },
       { id: 'main-popular', label: 'Популярное', href: '#' },
       { id: 'main-sales', label: 'Акции', href: '#' }

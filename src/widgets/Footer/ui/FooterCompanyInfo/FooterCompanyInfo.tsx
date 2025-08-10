@@ -35,7 +35,7 @@ export const FooterCompanyInfo = () => {
         alignItems: 'flex-start'
       }}
     >
-      <Logo component="a" src="/KAPPEL_MARC_WHITE.svg" />
+      <Logo src="/KAPPEL_MARC_WHITE.svg" />
       <Box component="p" sx={{ maxWidth: 370, my: 1, mb: 3 }}>
         Магазин мужской одежды с трендовыми вещами и стильными образами. Большой
         выбор качественных товаров с доставкой по всей стране.
