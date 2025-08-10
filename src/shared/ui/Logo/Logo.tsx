@@ -18,6 +18,7 @@ export const Logo = ({
   return (
     <NextLink href={href} style={{ display: 'inline-flex' }}>
       <Box
+        component="a"
         sx={{
           display: 'flex',
           justifyContent: 'center',

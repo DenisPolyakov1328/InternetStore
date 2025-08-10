@@ -2,6 +2,7 @@ import React from 'react'
 import { List, ListItemButton, ListItemIcon, ListItemText } from '@mui/material'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight'
 import { Category } from '@/shared/types'
+import { NextLink } from '@/shared/ui'
 
 interface CategoriesListViewProps {
   categories: Category[]
@@ -19,25 +20,26 @@ export const CategoriesList = ({
   return (
     <List>
       {categories.map((cat) => (
-        <ListItemButton
-          key={cat.id}
-          selected={hoveredCategory === cat.id}
-          onMouseEnter={() => onHover(cat.id)}
-          sx={{
-            height: 40,
-            minWidth: minWidthValue,
-            whiteSpace: 'nowrap'
-          }}
-        >
-          {cat.icon && (
-            <ListItemIcon sx={{ minWidth: 0 }}>{cat.icon}</ListItemIcon>
-          )}
-          <ListItemText
-            primary={cat.label}
-            sx={{ paddingLeft: cat.icon ? 1.5 : 0 }}
-          />
-          {cat.subCategories?.length ? <KeyboardArrowRightIcon /> : null}
-        </ListItemButton>
+        <NextLink href={cat.href} key={cat.id}>
+          <ListItemButton
+            selected={hoveredCategory === cat.id}
+            onMouseEnter={() => onHover(cat.id)}
+            sx={{
+              height: 40,
+              minWidth: minWidthValue,
+              whiteSpace: 'nowrap'
+            }}
+          >
+            {cat.icon && (
+              <ListItemIcon sx={{ minWidth: 0 }}>{cat.icon}</ListItemIcon>
+            )}
+            <ListItemText
+              primary={cat.label}
+              sx={{ paddingLeft: cat.icon ? 1.5 : 0 }}
+            />
+            {cat.subCategories?.length ? <KeyboardArrowRightIcon /> : null}
+          </ListItemButton>
+        </NextLink>
       ))}
     </List>
   )

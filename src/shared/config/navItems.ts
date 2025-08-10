@@ -6,42 +6,50 @@ export const navItems: NavItem[] = [
     title: 'Главная',
     subCategories: [
       { id: 'main-home', label: 'Домашняя страница', href: '/' },
-      { id: 'main-news', label: 'Новости', href: '#' },
-      { id: 'main-popular', label: 'Популярное', href: '#' },
-      { id: 'main-sales', label: 'Акции', href: '#' }
+      { id: 'main-news', label: 'Новости', href: '/news' },
+      { id: 'main-popular', label: 'Популярное', href: '/popular' },
+      { id: 'main-sales', label: 'Акции', href: '/sales' }
     ]
   },
   {
     id: 'catalog',
     title: 'Каталог',
     subCategories: [
-      { id: 'catalog-clothes', label: 'Одежда', href: '#' },
-      { id: 'catalog-shoes', label: 'Обувь', href: '#' },
-      { id: 'catalog-accessories', label: 'Аксессуары', href: '#' },
-      { id: 'catalog-new', label: 'Новинки', href: '#' },
-      { id: 'catalog-sale', label: 'Распродажа', href: '#' }
+      { id: 'catalog-clothes', label: 'Одежда', href: '/category/clothes' },
+      { id: 'catalog-shoes', label: 'Обувь', href: '/category/shoes' },
+      {
+        id: 'catalog-accessories',
+        label: 'Аксессуары',
+        href: '/category/accessories'
+      },
+      { id: 'catalog-new', label: 'Новинки', href: '/category/new' },
+      { id: 'catalog-sale', label: 'Распродажа', href: '/category/sale' }
     ]
   },
   {
     id: 'info',
     title: 'Информация',
     subCategories: [
-      { id: 'info-about', label: 'О магазине', href: '#' },
-      { id: 'info-delivery', label: 'Доставка и оплата', href: '#' },
-      { id: 'info-return', label: 'Политика возврата', href: '#' },
-      { id: 'info-contacts', label: 'Контакты', href: '#' },
-      { id: 'info-faq', label: 'FAQ', href: '#' }
+      { id: 'info-about', label: 'О магазине', href: '/about' },
+      { id: 'info-delivery', label: 'Доставка и оплата', href: '/delivery' },
+      { id: 'info-return', label: 'Политика возврата', href: '/return-policy' },
+      { id: 'info-contacts', label: 'Контакты', href: '/contacts' },
+      { id: 'info-faq', label: 'FAQ', href: '/faq' }
     ]
   },
   {
     id: 'account',
     title: 'Аккаунт',
     subCategories: [
-      { id: 'account-login', label: 'Войти', href: '#' },
-      { id: 'account-register', label: 'Регистрация', href: '#' },
-      { id: 'account-orders', label: 'Мои заказы', href: '#' },
-      { id: 'account-favorites', label: 'Избранное', href: '#' },
-      { id: 'account-settings', label: 'Настройки', href: '#' }
+      { id: 'account-login', label: 'Войти', href: '/login' },
+      { id: 'account-register', label: 'Регистрация', href: '/register' },
+      { id: 'account-orders', label: 'Мои заказы', href: '/account/orders' },
+      {
+        id: 'account-favorites',
+        label: 'Избранное',
+        href: '/account/favorites'
+      },
+      { id: 'account-settings', label: 'Настройки', href: '/account/settings' }
     ]
   }
 ]
