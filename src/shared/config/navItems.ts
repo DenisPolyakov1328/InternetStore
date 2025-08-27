@@ -15,15 +15,15 @@ export const navItems: NavItem[] = [
     id: 'catalog',
     title: 'Каталог',
     subCategories: [
-      { id: 'catalog-clothes', label: 'Одежда', href: '/category/clothes' },
-      { id: 'catalog-shoes', label: 'Обувь', href: '/category/shoes' },
+      { id: 'catalog-clothes', label: 'Одежда', href: '/categories/clothes' },
+      { id: 'catalog-shoes', label: 'Обувь', href: '/categories/shoes' },
       {
         id: 'catalog-accessories',
         label: 'Аксессуары',
-        href: '/category/accessories'
+        href: '/categories/accessories'
       },
-      { id: 'catalog-new', label: 'Новинки', href: '/category/new' },
-      { id: 'catalog-sale', label: 'Распродажа', href: '/category/sale' }
+      { id: 'catalog-new', label: 'Новинки', href: '/categories/new' },
+      { id: 'catalog-sale', label: 'Распродажа', href: '/categories/sale' }
     ]
   },
   {
