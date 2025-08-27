@@ -1,28 +1,42 @@
 import { Box } from '@mui/material'
+import { NextLink } from '@/shared/ui'
 
 interface FooterLinkProps {
   label: string
   href?: string
 }
+
 export const FooterLink = ({ label, href }: FooterLinkProps) => {
-  const Component = href ? 'a' : 'p'
+  if (!href) {
+    return (
+      <Box
+        component="p"
+        sx={{
+          display: 'block',
+          cursor: 'text',
+          paddingY: '5px'
+        }}
+      >
+        {label}
+      </Box>
+    )
+  }
 
   return (
-    <Box
-      component={Component}
-      href={href}
-      sx={{
-        display: 'block',
-        cursor: href ? 'pointer' : 'text',
-        paddingY: '5px',
-        ...(href && {
+    <NextLink href={href}>
+      <Box
+        component="a"
+        sx={{
+          display: 'block',
+          cursor: 'pointer',
+          paddingY: '5px',
           '&:hover': {
             color: 'background.default'
           }
-        })
-      }}
-    >
-      {label}
-    </Box>
+        }}
+      >
+        {label}
+      </Box>
+    </NextLink>
   )
 }
