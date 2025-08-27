@@ -9,21 +9,21 @@ export const footerColumns: FooterColumn[] = [
     id: 'about',
     title: 'О нас',
     items: [
-      { id: 'careers', label: 'Карьера', href: '#' },
-      { id: 'stores', label: 'Наши магазины', href: '#' },
-      { id: 'cares', label: 'Забота о клиентах', href: '#' },
-      { id: 'terms', label: 'Условия и положения', href: '#' },
-      { id: 'privacy', label: 'Политика конфиденциальности', href: '#' }
+      { id: 'careers', label: 'Карьера', href: '/careers' },
+      { id: 'stores', label: 'Наши магазины', href: '/stores' },
+      { id: 'cares', label: 'Забота о клиентах', href: '/customer-care' },
+      { id: 'terms', label: 'Условия и положения', href: '/terms' },
+      { id: 'privacy', label: 'Политика конфиденциальности', href: '/privacy' }
     ]
   },
   {
     id: 'customer',
     title: 'Служба поддержки',
     items: [
-      { id: 'help', label: 'Центр помощи', href: '#' },
-      { id: 'track', label: 'Отследить заказ', href: '#' },
-      { id: 'bulk', label: 'Корпоративные закупки', href: '#' },
-      { id: 'returns', label: 'Возврат и возмещение', href: '#' }
+      { id: 'help', label: 'Центр помощи', href: '/help' },
+      { id: 'track', label: 'Отследить заказ', href: '/track-order' },
+      { id: 'bulk', label: 'Корпоративные закупки', href: '/bulk-orders' },
+      { id: 'returns', label: 'Возврат и возмещение', href: '/returns' }
     ]
   },
   {
