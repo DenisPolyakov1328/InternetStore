@@ -12,7 +12,7 @@ export const MainContentWrapper = ({
   return (
     <Box
       component="main"
-      sx={{ backgroundColor: 'secondary.light' }}
+      sx={{ flex: 1, backgroundColor: 'secondary.light' }}
       {...props}
     >
       {children}
