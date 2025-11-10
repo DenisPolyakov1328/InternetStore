@@ -25,7 +25,6 @@ export const FooterLink = ({ label, href }: FooterLinkProps) => {
   return (
     <NextLink href={href}>
       <Box
-        component="a"
         sx={{
           display: 'block',
           cursor: 'pointer',

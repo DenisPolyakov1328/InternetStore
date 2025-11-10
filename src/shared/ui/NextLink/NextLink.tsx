@@ -7,9 +7,5 @@ type NextLinkProps = ComponentProps<typeof Link> & {
 }
 
 export const NextLink = ({ children, ...props }: NextLinkProps) => {
-  return (
-    <Link {...props} passHref legacyBehavior>
-      {children}
-    </Link>
-  )
+  return <Link {...props}>{children}</Link>
 }

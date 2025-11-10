@@ -1,4 +1,3 @@
-'use client'
 import { Box } from '@mui/material'
 import { SvgIconComponent } from '@mui/icons-material'
 import { NextLink } from '@/shared/ui'
@@ -22,7 +21,6 @@ export const BottomBarItem = ({
   return (
     <NextLink href={href}>
       <Box
-        component="a"
         sx={{
           display: 'flex',
           flexDirection: 'column',
