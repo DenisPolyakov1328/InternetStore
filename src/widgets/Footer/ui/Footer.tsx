@@ -1,6 +1,5 @@
 'use client'
-import { Box, Container } from '@mui/material'
-import Grid from '@mui/material/Grid2'
+import { Box, Container, Grid } from '@mui/material'
 import { footerColumns } from '@/shared/config'
 import { FooterColumn } from '@/entities/footer/ui/FooterColumn'
 import { FooterCompanyInfo } from '@/widgets/Footer/ui/FooterCompanyInfo'

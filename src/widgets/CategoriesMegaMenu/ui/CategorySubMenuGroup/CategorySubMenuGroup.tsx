@@ -1,6 +1,11 @@
-import { Typography, List, ListItemButton, ListItemText } from '@mui/material'
+import {
+  Grid,
+  Typography,
+  List,
+  ListItemButton,
+  ListItemText
+} from '@mui/material'
 import { SubCategoryGroup } from '@/shared/types'
-import Grid from '@mui/material/Grid2'
 import { NextLink } from '@/shared/ui'
 
 interface Props {

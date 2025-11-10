@@ -1,7 +1,6 @@
 'use client'
 import React from 'react'
-import { Paper } from '@mui/material'
-import Grid from '@mui/material/Grid2'
+import { Paper, Grid } from '@mui/material'
 import { SubCategoryGroup } from '@/shared/types'
 import { PromoBlockWithAnimation } from '@/entities/promo/ui'
 import { CategorySubMenuGroup } from '@/widgets/CategoriesMegaMenu/ui/CategorySubMenuGroup'
