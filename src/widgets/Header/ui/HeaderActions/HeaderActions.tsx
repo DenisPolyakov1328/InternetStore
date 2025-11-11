@@ -1,4 +1,4 @@
-import { CustomIconButton } from '@/shared/ui'
+import { CustomIconButton, NextLink } from '@/shared/ui'
 import { Box, SxProps, Theme } from '@mui/material'
 import { BadgeWrapper } from '@/shared/ui/BadgeWrapper'
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined'
@@ -20,13 +20,13 @@ export const HeaderActions = ({
       <CustomIconButton
         icon={AccountCircleOutlinedIcon}
         href="/account"
-        component="a"
+        component={NextLink}
       />
       <BadgeWrapper badgeContent={3}>
         <CustomIconButton
           icon={ShoppingBagOutlinedIcon}
           href="/cart"
-          component="a"
+          component={NextLink}
         />
       </BadgeWrapper>
     </Box>

@@ -27,7 +27,7 @@ export const BurgerMenuContent = ({ close }: BurgerMenuContentProps) => {
       />
       <Box sx={{ display: 'flex', flexDirection: 'column' }}>
         {navItems.map((item) => (
-          <BurgerMenuItem key={item.id} item={item} />
+          <BurgerMenuItem key={item.id} item={item} close={close} />
         ))}
       </Box>
     </Box>

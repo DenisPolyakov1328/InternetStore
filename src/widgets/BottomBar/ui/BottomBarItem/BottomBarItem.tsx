@@ -1,3 +1,4 @@
+'use client'
 import { Box } from '@mui/material'
 import { SvgIconComponent } from '@mui/icons-material'
 import { NextLink } from '@/shared/ui'
@@ -19,27 +20,29 @@ export const BottomBarItem = ({
   badgeContent
 }: BottomBarItemProps) => {
   return (
-    <NextLink href={href}>
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          flex: '1 1 0px',
-          fontSize: 13,
-          color: 'secondary.dark'
-        }}
-      >
-        {withBadge ? (
-          <BadgeWrapper badgeContent={badgeContent}>
-            <Icon />
-          </BadgeWrapper>
-        ) : (
+    <Box
+      component={NextLink}
+      href={href}
+      sx={{
+        height: '100%',
+        width: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        flex: '1 1 0px',
+        fontSize: 13,
+        color: 'secondary.dark'
+      }}
+    >
+      {withBadge ? (
+        <BadgeWrapper badgeContent={badgeContent}>
           <Icon />
-        )}
-        {title}
-      </Box>
-    </NextLink>
+        </BadgeWrapper>
+      ) : (
+        <Icon />
+      )}
+      {title}
+    </Box>
   )
 }

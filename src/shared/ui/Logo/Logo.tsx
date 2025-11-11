@@ -16,24 +16,24 @@ export const Logo = ({
   priority = false
 }: LogoProps) => {
   return (
-    <NextLink href={href} style={{ display: 'inline-flex' }}>
-      <Box
-        sx={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          cursor: 'pointer',
-          ...sx
-        }}
-      >
-        <Image
-          src={src}
-          alt="Логотип"
-          width={105}
-          height={63}
-          priority={priority}
-        />
-      </Box>
-    </NextLink>
+    <Box
+      component={NextLink}
+      href={href}
+      sx={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        cursor: 'pointer',
+        ...sx
+      }}
+    >
+      <Image
+        src={src}
+        alt="Логотип"
+        width={105}
+        height={63}
+        priority={priority}
+      />
+    </Box>
   )
 }

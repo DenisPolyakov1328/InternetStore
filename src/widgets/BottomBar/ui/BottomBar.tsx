@@ -16,6 +16,7 @@ export const BottomBar = () => {
         zIndex: 1201,
         backgroundColor: 'secondary.contrastText',
         justifyContent: 'space-around',
+        alignItems: 'center',
         boxShadow: 'rgba(0, 0, 0, 0.1) 0px 1px 4px 3px'
       }}
     >

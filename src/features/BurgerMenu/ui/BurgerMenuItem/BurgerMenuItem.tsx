@@ -9,7 +9,12 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 import { NavItem } from '@/shared/types'
 import { BurgerSubMenuItem } from '@/features/BurgerMenu/ui/BurgerSubMenuItem'
 
-export const BurgerMenuItem = ({ item }: { item: NavItem }) => {
+interface BurgerMenuItemProps {
+  item: NavItem
+  close: () => void
+}
+
+export const BurgerMenuItem = ({ item, close }: BurgerMenuItemProps) => {
   return (
     <Accordion
       disableGutters
@@ -49,7 +54,11 @@ export const BurgerMenuItem = ({ item }: { item: NavItem }) => {
           }}
         >
           {item.subCategories.map((subCategory) => (
-            <BurgerSubMenuItem key={subCategory.id} item={subCategory} />
+            <BurgerSubMenuItem
+              key={subCategory.id}
+              item={subCategory}
+              close={close}
+            />
           ))}
         </Box>
       </AccordionDetails>

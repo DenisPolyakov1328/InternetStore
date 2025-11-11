@@ -23,19 +23,19 @@ export const FooterLink = ({ label, href }: FooterLinkProps) => {
   }
 
   return (
-    <NextLink href={href}>
-      <Box
-        sx={{
-          display: 'block',
-          cursor: 'pointer',
-          paddingY: '5px',
-          '&:hover': {
-            color: 'background.default'
-          }
-        }}
-      >
-        {label}
-      </Box>
-    </NextLink>
+    <Box
+      component={NextLink}
+      href={href}
+      sx={{
+        display: 'block',
+        cursor: 'pointer',
+        paddingY: '5px',
+        '&:hover': {
+          color: 'background.default'
+        }
+      }}
+    >
+      {label}
+    </Box>
   )
 }

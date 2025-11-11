@@ -1,9 +1,20 @@
 import { Typography } from '@mui/material'
 import { SubCategory } from '@/shared/types'
+import { NextLink } from '@/shared/ui'
 
-export const BurgerSubMenuItem = ({ item }: { item: SubCategory }) => {
+interface BurgerSubMenuItemProps {
+  item: SubCategory
+  close: () => void
+}
+
+export const BurgerSubMenuItem = ({ item, close }: BurgerSubMenuItemProps) => {
   return (
-    <Typography component="a" href={item.href} sx={{ p: 1 }}>
+    <Typography
+      component={NextLink}
+      href={item.href}
+      sx={{ p: 1 }}
+      onClick={close}
+    >
       {item.label}
     </Typography>
   )

@@ -19,23 +19,24 @@ export const CategorySubMenuGroup = ({ group }: Props) => (
     </Typography>
     <List dense disablePadding>
       {group.items.map((item) => (
-        <NextLink href={item.href} key={item.id}>
-          <ListItemButton
+        <ListItemButton
+          component={NextLink}
+          href={item.href}
+          key={item.id}
+          sx={{
+            paddingY: 1,
+            paddingX: 0,
+            ':hover': { backgroundColor: 'transparent' }
+          }}
+        >
+          <ListItemText
+            primary={item.label}
             sx={{
-              paddingY: 1,
-              paddingX: 0,
-              ':hover': { backgroundColor: 'transparent' }
+              m: 0,
+              '.MuiTypography-root': { fontSize: 14 }
             }}
-          >
-            <ListItemText
-              primary={item.label}
-              sx={{
-                m: 0,
-                '.MuiTypography-root': { fontSize: 14 }
-              }}
-            />
-          </ListItemButton>
-        </NextLink>
+          />
+        </ListItemButton>
       ))}
     </List>
   </Grid>
