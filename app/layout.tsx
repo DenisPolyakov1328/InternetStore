@@ -3,7 +3,7 @@ import React from 'react'
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter'
 import ThemeProviderComponent from '@/app/providers/ThemeProviderComponent'
 import 'overlayscrollbars/overlayscrollbars.css'
-import './globals.css'
+import '@/app/globals.css'
 
 export const metadata: Metadata = {
   title: 'Mark Kappel',
