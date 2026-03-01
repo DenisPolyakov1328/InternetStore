@@ -1,5 +1,7 @@
+'use client'
 import React from 'react'
 import { Box, Typography, Button } from '@mui/material'
+import { useTranslations } from 'next-intl'
 import CategoryIcon from '@mui/icons-material/Category'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight'
 
@@ -10,6 +12,7 @@ interface CategoriesTriggerButtonProps {
 export const CategoriesTriggerButton = ({
   isOpen
 }: CategoriesTriggerButtonProps) => {
+  const t = useTranslations('nav')
   return (
     <Button
       sx={{
@@ -32,7 +35,7 @@ export const CategoriesTriggerButton = ({
       >
         <CategoryIcon sx={{ color: 'info.main' }} />
         <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
-          Категории
+          {t('categories')}
         </Typography>
       </Box>
       <Box

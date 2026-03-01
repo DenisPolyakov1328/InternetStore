@@ -15,7 +15,7 @@ export const HeaderActions = ({
   sx = {}
 }: HeaderActionsProps) => {
   return (
-    <Box sx={{ ...sx }}>
+    <Box sx={{ ...sx, display: 'flex', alignItems: 'center', gap: 0.5 }}>
       {isMobile && <MobileSearchTrigger />}
       <CustomIconButton
         icon={AccountCircleOutlinedIcon}

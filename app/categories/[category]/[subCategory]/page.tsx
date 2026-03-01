@@ -4,7 +4,6 @@ interface Props {
 
 export default async function Page({ params }: Props) {
   const { category, subCategory } = await params
-
   return (
     <div>
       Категория: {category}, Подкатегория: {subCategory}

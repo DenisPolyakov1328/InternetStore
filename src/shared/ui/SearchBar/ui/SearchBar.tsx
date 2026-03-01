@@ -2,11 +2,12 @@
 import React, { useState, MouseEvent } from 'react'
 import { Box, TextField } from '@mui/material'
 import SearchIcon from '@mui/icons-material/Search'
+import { useTranslations } from 'next-intl'
 import { SearchIconWithBox } from '@/shared/ui'
 import { CategoryButton } from '@/shared/ui'
 import { SearchButton } from '@/shared/ui'
 import { CategoryMenu } from '@/shared/ui'
-import { searchCategories } from '@/shared/config'
+import { useSearchCategories } from '@/shared/i18n/useSearchCategories'
 
 interface SearchBarProps {
   showCategories?: boolean
@@ -17,6 +18,8 @@ export const SearchBar = ({
   showCategories = false,
   showSearchButton = false
 }: SearchBarProps) => {
+  const t = useTranslations('common')
+  const searchCategories = useSearchCategories()
   const [category, setCategory] = useState<string>(searchCategories[0])
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
   const [searchText, setSearchText] = useState<string>('')
@@ -50,7 +53,7 @@ export const SearchBar = ({
     >
       <TextField
         variant="outlined"
-        placeholder="Поиск..."
+        placeholder={t('searchPlaceholder')}
         value={searchText}
         onChange={handleSearchChange}
         fullWidth

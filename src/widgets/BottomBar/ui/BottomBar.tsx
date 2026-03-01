@@ -1,8 +1,10 @@
+'use client'
 import { Box } from '@mui/material'
 import { BottomBarItem } from '@/widgets/BottomBar/ui/BottomBarItem/BottomBarItem'
-import { bottomBarItems } from '@/shared/config/bottomBarItems'
+import { useBottomBarItems } from '@/shared/i18n/useBottomBarItems'
 
 export const BottomBar = () => {
+  const bottomBarItems = useBottomBarItems()
   return (
     <Box
       sx={{

@@ -3,6 +3,7 @@ import { SocialLinks } from '@/shared/ui'
 import type { LinkItem } from '@/shared/types'
 import { ShippingBanner } from '../ShippingBanner'
 import { MobileToggleButton } from '../MobileToggleButton'
+import { LanguageSwitcher } from '@/features/LanguageSwitcher/ui/LanguageSwitcher'
 
 interface TopBarContentProps {
   isSocialOpen: boolean
@@ -43,6 +44,7 @@ export const TopBarContent = ({
             gap: 1.5
           }}
         >
+          <LanguageSwitcher />
           <SocialLinks links={links} />
         </Box>
       </Container>

@@ -1,8 +1,8 @@
 import React from 'react'
-import Link from 'next/link'
+import { Link } from '@/shared/i18n/navigation'
 import { ComponentProps } from 'react'
 
-type NextLinkProps = ComponentProps<typeof Link> & {
+type NextLinkProps = Omit<ComponentProps<typeof Link>, 'locale'> & {
   children: React.ReactNode
 }
 

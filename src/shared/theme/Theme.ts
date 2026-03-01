@@ -12,7 +12,8 @@ import {
   svgIconTheme,
   textFieldTheme,
   listItemButtonTheme,
-  paperTheme
+  paperTheme,
+  toggleButtonGroupTheme
 } from './components'
 
 import { fontFamily } from './fontTheme'
@@ -36,7 +37,8 @@ export const createMuiTheme = () => {
       MuiSvgIcon: svgIconTheme,
       MuiTextField: textFieldTheme,
       MuiListItemButton: listItemButtonTheme,
-      MuiPaper: paperTheme
+      MuiPaper: paperTheme,
+      MuiToggleButtonGroup: toggleButtonGroupTheme
     }
   })
 }

@@ -1,11 +1,14 @@
+'use client'
 import React from 'react'
 import { Button } from '@mui/material'
+import { useTranslations } from 'next-intl'
 
 interface SearchButtonProps {
   onClick?: () => void
 }
 
 export const SearchButton = ({ onClick }: SearchButtonProps) => {
+  const t = useTranslations('common')
   return (
     <Button
       sx={{
@@ -18,7 +21,7 @@ export const SearchButton = ({ onClick }: SearchButtonProps) => {
       }}
       onClick={onClick}
     >
-      Поиск
+      {t('search')}
     </Button>
   )
 }

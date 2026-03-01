@@ -1,9 +1,11 @@
+'use client'
 import { Paper, Container, Box } from '@mui/material'
 import { CategoriesMegaMenu } from '@/widgets/CategoriesMegaMenu'
 import { NavMenuItem } from '@/features/CategoriesMenu'
-import { navItems } from '@/shared/config'
+import { useNavItems } from '@/shared/i18n/useNavItems'
 
 export const CategoriesPanel = () => {
+  const navItems = useNavItems()
   return (
     <Paper
       elevation={0}

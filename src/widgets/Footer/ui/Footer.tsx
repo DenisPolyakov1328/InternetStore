@@ -1,6 +1,6 @@
 'use client'
 import { Box, Container, Grid } from '@mui/material'
-import { footerColumns } from '@/shared/config'
+import { useFooterColumns } from '@/shared/i18n/useFooterColumns'
 import { FooterColumn } from '@/entities/footer/ui/FooterColumn'
 import { FooterCompanyInfo } from '@/widgets/Footer/ui/FooterCompanyInfo'
 import { FooterSocialLinksGroup } from '@/widgets/Footer/ui/FooterSocialLinksGroup'
@@ -11,6 +11,7 @@ const contentMap = {
 } as const
 
 export const Footer = () => {
+  const footerColumns = useFooterColumns()
   return (
     <Box
       component="footer"

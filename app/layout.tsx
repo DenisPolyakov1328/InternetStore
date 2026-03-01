@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import React from 'react'
+import { getLocale, getMessages } from 'next-intl/server'
+import { NextIntlClientProvider } from 'next-intl'
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter'
 import ThemeProviderComponent from '@/app/providers/ThemeProviderComponent'
 import 'overlayscrollbars/overlayscrollbars.css'
@@ -15,16 +17,23 @@ export const metadata: Metadata = {
   }
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const locale = await getLocale()
+  const messages = await getMessages()
+
   return (
-    <html lang="ru">
+    <html lang={locale}>
       <body>
         <AppRouterCacheProvider>
-          <ThemeProviderComponent>{children}</ThemeProviderComponent>
+          <ThemeProviderComponent>
+            <NextIntlClientProvider messages={messages}>
+              {children}
+            </NextIntlClientProvider>
+          </ThemeProviderComponent>
         </AppRouterCacheProvider>
       </body>
     </html>

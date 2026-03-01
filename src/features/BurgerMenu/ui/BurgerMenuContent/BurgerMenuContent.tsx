@@ -1,7 +1,8 @@
+'use client'
 import { Box } from '@mui/material'
 import { CustomIconButton } from '@/shared/ui'
 import CloseIcon from '@mui/icons-material/Close'
-import { navItems } from '@/shared/config'
+import { useNavItems } from '@/shared/i18n/useNavItems'
 import { BurgerMenuItem } from '@/features/BurgerMenu/ui/BurgerMenuItem'
 
 interface BurgerMenuContentProps {
@@ -9,6 +10,7 @@ interface BurgerMenuContentProps {
 }
 
 export const BurgerMenuContent = ({ close }: BurgerMenuContentProps) => {
+  const navItems = useNavItems()
   return (
     <Box
       sx={{

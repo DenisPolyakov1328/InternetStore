@@ -1,6 +1,8 @@
 import { Box, Chip } from '@mui/material'
+import { useTranslations } from 'next-intl'
 
 export const ShippingBanner = () => {
+  const t = useTranslations('common')
   return (
     <Box
       sx={{
@@ -11,7 +13,7 @@ export const ShippingBanner = () => {
       }}
     >
       <Chip
-        label="АКЦИЯ"
+        label={t('promo')}
         sx={{
           color: 'primary.contrastText',
           backgroundColor: 'primary.main',
@@ -24,7 +26,7 @@ export const ShippingBanner = () => {
         }}
       ></Chip>
       <Box component="span" sx={{ fontSize: 12 }}>
-        Бесплатная экспресс-доставка
+        {t('freeExpressShipping')}
       </Box>
     </Box>
   )

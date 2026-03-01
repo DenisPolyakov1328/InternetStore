@@ -1,6 +1,8 @@
+'use client'
 import Image from 'next/image'
 import { Box, SxProps, Theme } from '@mui/material'
 import { NextLink } from '@/shared/ui'
+import { useTranslations } from 'next-intl'
 
 interface LogoProps {
   href?: string
@@ -15,6 +17,7 @@ export const Logo = ({
   src = '/KAPPEL_MARC_BLACK.svg',
   priority = false
 }: LogoProps) => {
+  const t = useTranslations('common')
   return (
     <Box
       component={NextLink}
@@ -29,7 +32,7 @@ export const Logo = ({
     >
       <Image
         src={src}
-        alt="Логотип"
+        alt={t('logoAlt')}
         width={105}
         height={63}
         priority={priority}

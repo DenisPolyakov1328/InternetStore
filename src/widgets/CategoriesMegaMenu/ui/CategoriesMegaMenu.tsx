@@ -1,7 +1,7 @@
 'use client'
 import { useState, useRef } from 'react'
 import { Box } from '@mui/material'
-import { categoriesArray } from '@/entities/category/model'
+import { useCategories } from '@/shared/i18n/useCategories'
 import { CategoriesCollapseList } from './CategoriesCollapseList'
 import { CategorySubMenu } from './CategorySubMenu'
 import {
@@ -20,6 +20,7 @@ export const CategoriesMegaMenu = ({
   const [open, setOpen] = useState(false)
   const [hoveredCategory, setHoveredCategory] = useState<string | null>(null)
   const wrapperRef = useRef<HTMLDivElement>(null)
+  const categoriesArray = useCategories()
 
   const activeCategory =
     categoriesArray.find((cat) => cat.id === hoveredCategory) ?? null

@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import { Paper, Grid } from '@mui/material'
+import { useTranslations } from 'next-intl'
 import { SubCategoryGroup } from '@/shared/types'
 import { PromoBlockWithAnimation } from '@/entities/promo/ui'
 import { CategorySubMenuGroup } from '@/widgets/CategoriesMegaMenu/ui/CategorySubMenuGroup'
@@ -10,6 +11,7 @@ interface CategorySubMenuProps {
 }
 
 export const CategorySubMenu = ({ subCategories }: CategorySubMenuProps) => {
+  const t = useTranslations('common')
   return (
     <Paper
       elevation={5}
@@ -28,9 +30,9 @@ export const CategorySubMenu = ({ subCategories }: CategorySubMenuProps) => {
         ))}
         <Grid size={{ xs: 3 }}>
           <PromoBlockWithAnimation
-            discountText="СКИДКА 40%"
-            offerText="Предложение ограничено"
-            buttonText="Купить сейчас"
+            discountText={t('discount40')}
+            offerText={t('offerLimited')}
+            buttonText={t('buyNow')}
           />
         </Grid>
       </Grid>

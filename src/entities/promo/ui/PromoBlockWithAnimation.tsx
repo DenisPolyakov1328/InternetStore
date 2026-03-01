@@ -1,6 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import { Box, Button, Typography } from '@mui/material'
+import { useTranslations } from 'next-intl'
 import Lottie from 'lottie-react'
 
 interface PromoBlockWithAnimationProps {
@@ -16,6 +17,7 @@ export const PromoBlockWithAnimation = ({
   buttonText,
   animationPath = '/AnimationSale.json'
 }: PromoBlockWithAnimationProps) => {
+  const t = useTranslations('common')
   const [animationData, setAnimationData] = useState<object | null>(null)
 
   useEffect(() => {
@@ -24,9 +26,9 @@ export const PromoBlockWithAnimation = ({
       .then(setAnimationData)
       .catch((err) => {
         // eslint-disable-next-line no-console
-        console.error('Ошибка при загрузке анимации:', err)
+        console.error(t('errorLoadingAnimation'), err)
       })
-  }, [animationPath])
+  }, [animationPath, t])
 
   return (
     <Box

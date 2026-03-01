@@ -1,22 +1,27 @@
+'use client'
 import React from 'react'
 import { Box, Typography } from '@mui/material'
+import { useTranslations } from 'next-intl'
 import { CustomIconButton } from '@/shared/ui'
 import CloseIcon from '@mui/icons-material/Close'
 import { SearchBar } from '@/shared/ui/SearchBar'
 
-export const MobileSearchPanel = ({ onClose }: { onClose: () => void }) => (
-  <Box sx={{ width: 'auto', padding: 2, height: '100vh' }}>
-    <Box
-      sx={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        mb: 1
-      }}
-    >
-      <Typography variant="subtitle1">Поиск по магазину</Typography>
-      <CustomIconButton icon={CloseIcon} onClick={onClose} />
+export const MobileSearchPanel = ({ onClose }: { onClose: () => void }) => {
+  const t = useTranslations('common')
+  return (
+    <Box sx={{ width: 'auto', padding: 2, height: '100vh' }}>
+      <Box
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          mb: 1
+        }}
+      >
+        <Typography variant="subtitle1">{t('searchInStore')}</Typography>
+        <CustomIconButton icon={CloseIcon} onClick={onClose} />
+      </Box>
+      <SearchBar showSearchButton={true} />
     </Box>
-    <SearchBar showSearchButton={true} />
-  </Box>
-)
+  )
+}

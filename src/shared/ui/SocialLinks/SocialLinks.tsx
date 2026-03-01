@@ -1,4 +1,4 @@
-import { Link } from '@mui/material'
+import { Link, Stack } from '@mui/material'
 import type { LinkItem } from '@/shared/types'
 
 interface Props {
@@ -6,7 +6,12 @@ interface Props {
 }
 
 export const SocialLinks = ({ links }: Props) => (
-  <>
+  <Stack
+    direction="row"
+    justifyContent="center"
+    alignItems="center"
+    sx={{ gap: 1.5 }}
+  >
     {links.map(({ icon: Icon, url }) => (
       <Link
         href={url}
@@ -14,6 +19,13 @@ export const SocialLinks = ({ links }: Props) => (
         underline="none"
         target="_blank"
         rel="noopener noreferrer"
+        sx={{
+          display: 'inline-flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          width: 16,
+          height: 16
+        }}
       >
         <Icon
           sx={{
@@ -23,5 +35,5 @@ export const SocialLinks = ({ links }: Props) => (
         />
       </Link>
     ))}
-  </>
+  </Stack>
 )

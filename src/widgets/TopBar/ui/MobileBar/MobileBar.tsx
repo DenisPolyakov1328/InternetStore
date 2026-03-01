@@ -1,6 +1,7 @@
 import { Box, Container } from '@mui/material'
 import { SocialLinks } from '@/shared/ui'
 import type { LinkItem } from '@/shared/types'
+import { LanguageSwitcher } from '@/features/LanguageSwitcher'
 
 interface Props {
   isSocialOpen: boolean
@@ -9,21 +10,26 @@ interface Props {
 
 export const MobileBar = ({ isSocialOpen, links }: Props) => {
   return (
-    <>
-      <Box
+    <Box
+      sx={{
+        display: { xs: 'block', smp: 'none' },
+        overflow: 'hidden',
+        height: isSocialOpen ? 0 : 40,
+        transition: 'height 0.3s ease, opacity 0.3s ease',
+        opacity: isSocialOpen ? 0 : 1,
+        backgroundColor: 'secondary.main'
+      }}
+    >
+      <Container
         sx={{
-          display: { xs: 'block', smp: 'none' },
-          overflow: 'hidden',
-          height: isSocialOpen ? 0 : 40,
-          transition: 'height 0.3s ease, opacity 0.3s ease',
-          opacity: isSocialOpen ? 0 : 1,
-          backgroundColor: 'secondary.main'
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between'
         }}
       >
-        <Container sx={{ gap: 1.5 }}>
-          <SocialLinks links={links} />
-        </Container>
-      </Box>
-    </>
+        <LanguageSwitcher />
+        <SocialLinks links={links} />
+      </Container>
+    </Box>
   )
 }
