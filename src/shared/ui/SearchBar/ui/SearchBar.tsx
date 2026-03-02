@@ -7,7 +7,7 @@ import { SearchIconWithBox } from '@/shared/ui'
 import { CategoryButton } from '@/shared/ui'
 import { SearchButton } from '@/shared/ui'
 import { CategoryMenu } from '@/shared/ui'
-import { useSearchCategories } from '@/shared/i18n/useSearchCategories'
+import { useSearchCategories } from '../lib/useSearchCategories'
 
 interface SearchBarProps {
   showCategories?: boolean
@@ -20,7 +20,7 @@ export const SearchBar = ({
 }: SearchBarProps) => {
   const t = useTranslations('common')
   const searchCategories = useSearchCategories()
-  const [category, setCategory] = useState<string>(searchCategories[0])
+  const [selectedIndex, setSelectedIndex] = useState(0)
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
   const [searchText, setSearchText] = useState<string>('')
 
@@ -33,7 +33,8 @@ export const SearchBar = ({
   }
 
   const handleCategorySelect = (category: string) => {
-    setCategory(category)
+    const index = searchCategories.indexOf(category)
+    setSelectedIndex(index >= 0 ? index : 0)
     handleCategoryClose()
   }
 
@@ -81,7 +82,7 @@ export const SearchBar = ({
           ),
           endAdornment: showCategories ? (
             <CategoryButton
-              category={category}
+              category={searchCategories[selectedIndex]}
               onCategoryClick={handleCategoryClick}
             />
           ) : (

@@ -7,7 +7,7 @@ import {
 } from '@mui/material'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 import { NavItem } from '@/shared/types'
-import { BurgerSubMenuItem } from '@/features/BurgerMenu/ui/BurgerSubMenuItem'
+import { BurgerSubMenuItem } from '../BurgerSubMenuItem'
 
 interface BurgerMenuItemProps {
   item: NavItem

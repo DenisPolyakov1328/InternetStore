@@ -2,7 +2,7 @@
 import { Paper, Container, Box } from '@mui/material'
 import { CategoriesMegaMenu } from '@/widgets/CategoriesMegaMenu'
 import { NavMenuItem } from '@/features/CategoriesMenu'
-import { useNavItems } from '@/shared/i18n/useNavItems'
+import { useNavItems } from '@/shared/lib/useNavItems'
 
 export const CategoriesPanel = () => {
   const navItems = useNavItems()

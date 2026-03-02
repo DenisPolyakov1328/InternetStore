@@ -1,14 +1,12 @@
 'use client'
 import { useState, useRef } from 'react'
 import { Box } from '@mui/material'
-import { useCategories } from '@/shared/i18n/useCategories'
+import { useCategories } from '../lib/useCategories'
 import { CategoriesCollapseList } from './CategoriesCollapseList'
 import { CategorySubMenu } from './CategorySubMenu'
-import {
-  CategoriesTriggerButton,
-  CategoriesTriggerIconButton
-} from '@/widgets/CategoriesMegaMenu'
-import { useClickOutside, useHideOnScroll } from '@/shared/lib/hooks'
+import { CategoriesTriggerButton } from './CategoriesTriggerButton'
+import { CategoriesTriggerIconButton } from './CategoriesTriggerIconButton'
+import { useClickOutside, useHideOnScroll } from '@/shared/lib'
 
 interface CategoriesMegaMenuProps {
   openButton?: boolean

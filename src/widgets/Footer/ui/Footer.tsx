@@ -1,9 +1,9 @@
 'use client'
 import { Box, Container, Grid } from '@mui/material'
-import { useFooterColumns } from '@/shared/i18n/useFooterColumns'
-import { FooterColumn } from '@/entities/footer/ui/FooterColumn'
-import { FooterCompanyInfo } from '@/widgets/Footer/ui/FooterCompanyInfo'
-import { FooterSocialLinksGroup } from '@/widgets/Footer/ui/FooterSocialLinksGroup'
+import { useFooterColumns } from '../lib/useFooterColumns'
+import { FooterColumn } from './FooterColumn'
+import { FooterCompanyInfo } from './FooterCompanyInfo'
+import { FooterSocialLinksGroup } from './FooterSocialLinksGroup'
 
 const contentMap = {
   companyInfo: <FooterCompanyInfo />,

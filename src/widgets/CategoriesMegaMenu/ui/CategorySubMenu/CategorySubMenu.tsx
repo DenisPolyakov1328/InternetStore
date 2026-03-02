@@ -3,8 +3,8 @@ import React from 'react'
 import { Paper, Grid } from '@mui/material'
 import { useTranslations } from 'next-intl'
 import { SubCategoryGroup } from '@/shared/types'
-import { PromoBlockWithAnimation } from '@/entities/promo/ui'
-import { CategorySubMenuGroup } from '@/widgets/CategoriesMegaMenu/ui/CategorySubMenuGroup'
+import { PromoBlockWithAnimation } from '@/shared/ui'
+import { CategorySubMenuGroup } from '../CategorySubMenuGroup'
 
 interface CategorySubMenuProps {
   subCategories: SubCategoryGroup[]

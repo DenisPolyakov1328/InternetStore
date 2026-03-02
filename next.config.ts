@@ -4,7 +4,16 @@ import createNextIntlPlugin from 'next-intl/plugin'
 const withNextIntl = createNextIntlPlugin('./src/shared/i18n/request.ts')
 
 const nextConfig: NextConfig = {
-  reactStrictMode: true
+  reactStrictMode: true,
+  async redirects() {
+    return [
+      {
+        source: '/dashboard',
+        destination: '/',
+        permanent: false
+      }
+    ]
+  }
 }
 
 export default withNextIntl(nextConfig)

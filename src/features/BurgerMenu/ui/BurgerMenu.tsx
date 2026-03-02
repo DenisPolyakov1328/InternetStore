@@ -1,9 +1,9 @@
-import { BurgerMenuButton } from '@/features/BurgerMenu/ui/BurgerMenuButton'
-import { BurgerMenuDrawer } from '@/features/BurgerMenu/ui/BurgerMenuDrawer'
-import { useBurgerMenuDrawer } from '@/features/BurgerMenu/lib'
+import { useToggleDrawer } from '@/shared/lib'
+import { BurgerMenuButton } from './BurgerMenuButton'
+import { BurgerMenuDrawer } from './BurgerMenuDrawer'
 
 export const BurgerMenu = () => {
-  const { isOpen, close, toggle } = useBurgerMenuDrawer()
+  const { isOpen, close, toggle } = useToggleDrawer()
   return (
     <>
       <BurgerMenuButton toggle={toggle} />
