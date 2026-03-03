@@ -1,6 +1,6 @@
 import { DrawerWrapper, ScrollWrapper } from '@/shared/ui'
 import { Box } from '@mui/material'
-import { BurgerMenuContent } from '@/features/BurgerMenu/ui/BurgerMenuContent'
+import { BurgerMenuContent } from '../BurgerMenuContent'
 
 interface BurgerMenuDrawerProps {
   isOpen: boolean

@@ -1,1 +1,0 @@
-export { PromoBlockWithAnimation } from './PromoBlockWithAnimation'

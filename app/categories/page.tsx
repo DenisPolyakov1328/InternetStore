@@ -1,5 +1,5 @@
-import { Box } from '@mui/material'
+import { CategoriesPage } from '@/pages/CategoriesPage'
 
 export default function Page() {
-  return <Box sx={{ p: 2 }}>Категории</Box>
+  return <CategoriesPage />
 }

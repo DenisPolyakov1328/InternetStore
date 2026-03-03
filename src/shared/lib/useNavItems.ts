@@ -11,11 +11,11 @@ export function useNavItems(): NavItem[] {
     () =>
       navItemsStructure.map((item) => ({
         id: item.id,
-        title: t(item.titleKey as any),
+        title: t(item.titleKey),
         subCategories: item.subCategories.map(
           (sub): SubCategory => ({
             id: sub.id,
-            label: t(sub.labelKey as any),
+            label: t(sub.labelKey),
             href: sub.href
           })
         )

@@ -12,7 +12,16 @@ export const MainContentWrapper = ({
   return (
     <Box
       component="main"
-      sx={{ flex: 1, backgroundColor: 'secondary.light' }}
+      sx={[
+        {
+          flex: 1,
+          minHeight: 0,
+          display: 'flex',
+          flexDirection: 'column',
+          backgroundColor: 'secondary.light',
+          pb: { xs: '70px', lgp: 0 }
+        }
+      ]}
       {...props}
     >
       {children}

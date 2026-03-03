@@ -1,16 +1,22 @@
 'use client'
 import { Box } from '@mui/material'
-import { BottomBarItem } from '@/widgets/BottomBar/ui/BottomBarItem/BottomBarItem'
-import { useBottomBarItems } from '@/shared/i18n/useBottomBarItems'
+import { usePathname } from '@/shared/i18n'
+import { BottomBarItem } from './BottomBarItem/BottomBarItem'
+import { useBottomBarItems } from '../lib/useBottomBarItems'
 
 export const BottomBar = () => {
+  const pathname = usePathname() ?? ''
   const bottomBarItems = useBottomBarItems()
+
+  const isActive = (href: string) =>
+    href === '/' ? pathname === '/' : pathname.startsWith(href)
+
   return (
     <Box
       sx={{
         display: { xs: 'flex', lgp: 'none' },
         width: '100vw',
-        height: 70,
+        height: '70px',
         position: 'fixed',
         left: 0,
         right: 0,
@@ -30,6 +36,7 @@ export const BottomBar = () => {
           icon={item.icon}
           withBadge={item.withBadge}
           badgeContent={3}
+          active={isActive(item.href)}
         />
       ))}
     </Box>

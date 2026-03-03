@@ -4,6 +4,11 @@
   --os-handle-bg-active: #dae1e780;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 * {
   box-sizing: border-box;
   font-size: 14px;

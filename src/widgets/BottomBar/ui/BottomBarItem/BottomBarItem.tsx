@@ -10,6 +10,7 @@ type BottomBarItemProps = {
   icon: SvgIconComponent
   withBadge?: boolean
   badgeContent: number
+  active?: boolean
 }
 
 export const BottomBarItem = ({
@@ -17,7 +18,8 @@ export const BottomBarItem = ({
   title,
   icon: Icon,
   withBadge,
-  badgeContent
+  badgeContent,
+  active = false
 }: BottomBarItemProps) => {
   return (
     <Box
@@ -32,7 +34,8 @@ export const BottomBarItem = ({
         justifyContent: 'center',
         flex: '1 1 0px',
         fontSize: 13,
-        color: 'secondary.dark'
+        color: 'secondary.dark',
+        backgroundColor: active ? 'action.hover' : 'transparent'
       }}
     >
       {withBadge ? (

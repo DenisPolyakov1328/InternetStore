@@ -3,7 +3,7 @@ import React from 'react'
 import { Paper, Grid } from '@mui/material'
 import { useTranslations } from 'next-intl'
 import { SubCategoryGroup } from '@/shared/types'
-import { PromoBlockWithAnimation } from '@/widgets/CategoriesMegaMenu/ui/PromoBlockWithAnimation'
+import { PromoBlockWithAnimation } from '@/shared/ui'
 import { CategorySubMenuGroup } from '@/widgets/CategoriesMegaMenu/ui/CategorySubMenuGroup'
 
 interface CategorySubMenuProps {

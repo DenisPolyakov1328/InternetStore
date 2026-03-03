@@ -1,1 +1,1 @@
-export { FooterColumn } from './FooterColumn'
+export * from './FooterColumn'

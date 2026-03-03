@@ -2,8 +2,8 @@
 import { Box } from '@mui/material'
 import { CustomIconButton } from '@/shared/ui'
 import CloseIcon from '@mui/icons-material/Close'
-import { useNavItems } from '@/shared/i18n/useNavItems'
-import { BurgerMenuItem } from '@/features/BurgerMenu/ui/BurgerMenuItem'
+import { useNavItems } from '@/shared/lib/useNavItems'
+import { BurgerMenuItem } from '../BurgerMenuItem'
 
 interface BurgerMenuContentProps {
   close: () => void
