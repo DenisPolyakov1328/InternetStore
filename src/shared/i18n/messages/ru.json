@@ -145,5 +145,20 @@
     "waist-bags": "Поясные сумки",
     "new": "Новинки",
     "sale": "Скидки"
+  },
+  "category": {
+    "productsTitle": "Товары",
+    "productsCount": "Товары ({count})",
+    "empty": "В этой категории пока нет товаров."
+  },
+  "product": {
+    "size": "Размер",
+    "color": "Цвет",
+    "noImage": "Нет изображения",
+    "inStock": "В наличии",
+    "outOfStock": "Нет в наличии",
+    "badgeNew": "Новинка",
+    "badgeSale": "Скидка",
+    "badgeBestseller": "Хит"
   }
 }

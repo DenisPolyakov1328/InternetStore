@@ -145,5 +145,20 @@
     "waist-bags": "Waist bags",
     "new": "New",
     "sale": "Sale"
+  },
+  "category": {
+    "productsTitle": "Products",
+    "productsCount": "Products ({count})",
+    "empty": "No products in this category yet."
+  },
+  "product": {
+    "size": "Size",
+    "color": "Color",
+    "noImage": "No image",
+    "inStock": "In stock",
+    "outOfStock": "Out of stock",
+    "badgeNew": "New",
+    "badgeSale": "Sale",
+    "badgeBestseller": "Bestseller"
   }
 }

@@ -1,7 +1,7 @@
 'use client'
 import { Box, Container, Grid } from '@mui/material'
 import { useFooterColumns } from '@/shared/i18n/useFooterColumns'
-import { FooterColumn } from '@/entities/footer/ui/FooterColumn'
+import { FooterColumn } from '@/widgets/Footer/ui/FooterColumn'
 import { FooterCompanyInfo } from '@/widgets/Footer/ui/FooterCompanyInfo'
 import { FooterSocialLinksGroup } from '@/widgets/Footer/ui/FooterSocialLinksGroup'
 
