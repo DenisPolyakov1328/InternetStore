@@ -24,7 +24,8 @@ export type Product = {
   description?: LocalizedText
   price: Money
 
-  images: string[] // пути из /public или URL
+  /** Пути из /public или URL; первый элемент — главное (обложка) изображение */
+  images: string[]
   categorySlug: string // чтобы связать с категориями (пока достаточно)
 
   variants?: ProductVariant[] // если товара нет вариантов — можно не задавать

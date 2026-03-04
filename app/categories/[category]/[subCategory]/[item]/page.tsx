@@ -15,7 +15,7 @@ export default async function CategoryItemPage({ params }: Props) {
   return (
     <Container sx={{ py: 3 }}>
       {products.length > 0 ? (
-        <Grid container spacing={2}>
+        <Grid container spacing={2} sx={{ width: '100%' }}>
           {products.map((product) => (
             <Grid size={{ xs: 12, sm: 6, md: 4, lg: 3 }} key={product.id}>
               <ProductCard product={product} />

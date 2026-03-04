@@ -10,7 +10,16 @@ export const CategoriesLayout = ({
   children: React.ReactNode
 }) => (
   <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-    <Container sx={{ display: 'block', flexShrink: 0 }}>
+    <Container
+      sx={{
+        display: 'block',
+        flexShrink: 0,
+        position: 'sticky',
+        top: 0,
+        zIndex: 1100,
+        bgcolor: 'background.paper'
+      }}
+    >
       <HeaderMobile sx={{ display: 'flex' }} />
     </Container>
     <MainContentWrapper>{children}</MainContentWrapper>

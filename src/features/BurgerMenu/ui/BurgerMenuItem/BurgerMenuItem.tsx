@@ -42,7 +42,18 @@ export const BurgerMenuItem = ({ item, close }: BurgerMenuItemProps) => {
       <AccordionDetails
         sx={{
           padding: 0,
-          backgroundColor: 'transparent'
+          backgroundColor: 'transparent',
+          position: 'relative',
+          '&::before': {
+            content: '""',
+            position: 'absolute',
+            left: 0,
+            top: 0,
+            bottom: 0,
+            width: 2,
+            borderRadius: 1,
+            backgroundColor: 'divider'
+          }
         }}
       >
         <Box

@@ -193,7 +193,8 @@ export const categoriesStructure: CategoryStructure[] = [
         items: [
           { id: 'backpacks', href: item('accessories', 'bags', 'backpacks') },
           { id: 'shoulder-bags', href: item('accessories', 'bags', 'shoulder-bags') },
-          { id: 'waist-bags', href: item('accessories', 'bags', 'waist-bags') }
+          { id: 'waist-bags', href: item('accessories', 'bags', 'waist-bags') },
+          { id: 'clutches', href: item('accessories', 'bags', 'clutches') }
         ]
       }
     ]

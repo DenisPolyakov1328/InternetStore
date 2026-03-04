@@ -6,11 +6,14 @@ import {
   Box,
   Chip,
   Grid,
+  IconButton,
   Stack,
   ToggleButton,
   ToggleButtonGroup,
   Typography
 } from '@mui/material'
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
+import ChevronRightIcon from '@mui/icons-material/ChevronRight'
 import type { Product } from '@/entities/product/model/types'
 import type { Locale } from '@/shared/i18n/routing'
 import { routing } from '@/shared/i18n/routing'
@@ -86,6 +89,7 @@ interface ProductDetailViewProps {
 export function ProductDetailView({ product }: ProductDetailViewProps) {
   const locale = useLocale() as Locale
   const t = useTranslations('product')
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0)
   const {
     title,
     description,
@@ -102,6 +106,16 @@ export function ProductDetailView({ product }: ProductDetailViewProps) {
   const sizes = [...new Set(variants?.map((v) => v.size).filter(Boolean))] as string[]
   const colors = [...new Set(variants?.map((v) => v.color).filter(Boolean))] as string[]
 
+  const currentImageSrc = images[selectedImageIndex]
+  const hasMultipleImages = images.length > 1
+
+  const goPrev = () => {
+    setSelectedImageIndex((i) => (i <= 0 ? images.length - 1 : i - 1))
+  }
+  const goNext = () => {
+    setSelectedImageIndex((i) => (i >= images.length - 1 ? 0 : i + 1))
+  }
+
   return (
     <Box sx={{ py: 3, px: { xs: 2, md: 0 } }}>
       <Grid container spacing={4}>
@@ -115,27 +129,76 @@ export function ProductDetailView({ product }: ProductDetailViewProps) {
               bgcolor: 'grey.100'
             }}
           >
-            {images[0] && (
+            {currentImageSrc && (
               <ProductImage
-                src={images[0]}
+                src={currentImageSrc}
                 alt={titleText}
                 fill
                 noImageLabel={t('noImage')}
               />
             )}
+            {hasMultipleImages && (
+              <>
+                <IconButton
+                  size="small"
+                  onClick={goPrev}
+                  sx={{
+                    position: 'absolute',
+                    left: 8,
+                    top: '50%',
+                    transform: 'translateY(-50%)',
+                    bgcolor: 'rgba(255,255,255,0.9)',
+                    '&:hover': { bgcolor: 'background.paper' }
+                  }}
+                  aria-label="Previous image"
+                >
+                  <ChevronLeftIcon />
+                </IconButton>
+                <IconButton
+                  size="small"
+                  onClick={goNext}
+                  sx={{
+                    position: 'absolute',
+                    right: 8,
+                    top: '50%',
+                    transform: 'translateY(-50%)',
+                    bgcolor: 'rgba(255,255,255,0.9)',
+                    '&:hover': { bgcolor: 'background.paper' }
+                  }}
+                  aria-label="Next image"
+                >
+                  <ChevronRightIcon />
+                </IconButton>
+              </>
+            )}
           </Box>
-          {images.length > 1 && (
+          {hasMultipleImages && (
             <Stack direction="row" spacing={1} sx={{ mt: 1 }}>
               {images.slice(0, 4).map((src, i) => (
                 <Box
                   key={i}
+                  onClick={() => setSelectedImageIndex(i)}
+                  role="button"
+                  tabIndex={0}
+                  aria-label={`Image ${i + 1}`}
+                  aria-pressed={selectedImageIndex === i}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault()
+                      setSelectedImageIndex(i)
+                    }
+                  }}
                   sx={{
                     position: 'relative',
                     width: 72,
                     height: 72,
                     borderRadius: 1,
                     overflow: 'hidden',
-                    bgcolor: 'grey.200'
+                    bgcolor: 'grey.200',
+                    cursor: 'pointer',
+                    border: 2,
+                    borderColor: selectedImageIndex === i ? 'primary.main' : 'transparent',
+                    transition: 'border-color 0.2s'
                   }}
                 >
                   <ProductImage

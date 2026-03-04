@@ -15,6 +15,7 @@ export const categoryItemLabelKeys: Record<string, string> = {
   'shoes|shoe-types|shoes': 'shoesFormal',
   'accessories|bags|shoulder-bags': 'shoulderBags',
   'accessories|bags|waist-bags': 'waistBags',
+  'accessories|bags|clutches': 'clutches',
   'sportswear|sports-clothes|sport-t-shirts': 'sportTShirts'
 }
 
